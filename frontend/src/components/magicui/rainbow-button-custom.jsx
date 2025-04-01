@@ -2,11 +2,11 @@
 
 import React from "react";
 
-export const RainbowButton = React.forwardRef(
+export const RainbowButtonCustom = React.forwardRef(
   ({ children, className, variant = "dark", intensity = "medium", ...props }, ref) => {
     const intensityPresets = {
       subtle: {
-        borderHeight: "h-[0px]",
+        borderHeight: "h-0",
         glowHeight: "h-[12px]",
         glowBlur: "blur-[12px]",
         glowOpacity: "opacity-90",
@@ -14,7 +14,7 @@ export const RainbowButton = React.forwardRef(
         shadow: "shadow-sm",
       },
       medium: {
-        borderHeight: "h-[0px]",
+        borderHeight: "h-0",
         glowHeight: "h-[16px]",
         glowBlur: "blur-[16px]",
         glowOpacity: "opacity-95",
@@ -22,7 +22,7 @@ export const RainbowButton = React.forwardRef(
         shadow: "shadow-md",
       },
       bold: {
-        borderHeight: "h-[0px]",
+        borderHeight: "h-0",
         glowHeight: "h-[20px]",
         glowBlur: "blur-[20px]",
         glowOpacity: "opacity-100",
@@ -56,7 +56,7 @@ export const RainbowButton = React.forwardRef(
           <span className="relative z-20 flex items-center justify-center transition-transform duration-300 group-hover:translate-y-[-2px]">
             {children}
           </span>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 opacity-0  transition-opacity duration-300 rounded-xl" />
         </button>
 
         {/* Rainbow elements with direct color values */}
@@ -66,7 +66,7 @@ export const RainbowButton = React.forwardRef(
             className={`absolute bottom-0 left-0 right-0 ${borderHeight} rounded-b-lg z-10`}
             style={{
               background: rainbowGradient,
-              backgroundSize: "200% 100%",
+              backgroundSize: "200% 100% 50%",
               animation: "rainbow 2s linear infinite",
             }}
           />
@@ -86,4 +86,4 @@ export const RainbowButton = React.forwardRef(
   }
 );
 
-RainbowButton.displayName = "RainbowButton";
+RainbowButtonCustom.displayName = "RainbowButtonCustom";

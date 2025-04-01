@@ -1,7 +1,7 @@
 const {heroui} = require('@heroui/theme');
-// const {
-//   default: flattenColorPalette,
-// } = require("tailwindcss/lib/util/flattenColorPalette");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 import tailwindcss from "tailwindcss";
 import plugin from "tailwindcss/plugin";
@@ -85,16 +85,7 @@ export default {
       "rainbow": "rainbow 2s ease infinite",
     },
   },
-  plugins: [require("tailwindcss-animate"),plugin(function ({ addUtilities,theme }) {
-      const colors = theme("colors"); // Access the theme object here
-      const utilities = {};
-
-      Object.entries(colors).forEach(([key,value,heroui()]) => {
-        utilities[`.bg-${key}`] = { backgroundColor: value };
-      });
-
-      addUtilities(utilities);
-    }),
+  plugins: [require("tailwindcss-animate"),
     require("@tailwindcss/typography"), 
   ],
 };

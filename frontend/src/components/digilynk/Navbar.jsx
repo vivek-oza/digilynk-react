@@ -5,7 +5,7 @@ import logo from '../../assets/icons/digilynk_dark.png';
 import { InteractiveHoverButton } from '../magicui/interactive-hover-button';
 import { motion, AnimatePresence, easeInOut } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react'
-import { RainbowButton } from '../magicui/rainbow-button';
+import { RainbowButtonCustom } from "../magicui/rainbow-button-custom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +30,8 @@ export default function Navbar() {
           <li className='hover:bg-zinc-800 hover:text-white px-3 py-2 rounded-md hover:border-b-blue-500   cursor-pointer transition'>PRICING</li>
           <li className='hover:bg-zinc-800 hover:text-white px-3 py-2 rounded-md hover:border-b-blue-500   cursor-pointer transition'>CONTACT</li>
         </ul>
-        <RainbowButton intensity="subtle">Let's Talk 👋</RainbowButton>
+        {/* <RainbowButtonCustom intensity="subtle">Let's Talk 👋</RainbowButtonCustom> */}
+        <InteractiveHoverButton intensity="subtle">Let's Talk 👋</InteractiveHoverButton>
       </div>
 
       {/* Mobile Hamburger Button */}
@@ -60,7 +61,8 @@ export default function Navbar() {
               <li className='hover:text-blue-500 flex justify-start cursor-pointer transition w-full text-center py-2'>CONTACT</li>
               <li className='w-full text-center py-2'>
 
-              <RainbowButton intensity="subtle" className="">Let's Talk 👋</RainbowButton>
+              {/* <RainbowButtonCustom intensity="subtle" className="">Let's Talk 👋</RainbowButtonCustom> */}
+              <InteractiveHoverButton intensity="subtle" className="text-black hover:text-white">Let's Talk 👋</InteractiveHoverButton>
               </li>
             </ul>
           </motion.div>

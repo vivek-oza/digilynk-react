@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -135,6 +136,7 @@
     0% {
       background-position: 0%;
     }
+
     100% {
       background-position: 200%;
     }
@@ -145,28 +147,37 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
-.digilynkAccent{
+html {
+  font-family: poppins;
+}
+
+.digilynkAccent {
   background-color: var(--digilynk-accent);
 }
-.digilynkPrimary{
+
+.digilynkPrimary {
   background-color: var(--digilynk-primary);
 }
-.digilynkSecondary{
+
+.digilynkSecondary {
   background-color: var(--digilynk-secondary);
 }
-.digilynkLight{
+
+.digilynkLight {
   background-color: var(--digilynk-light);
 }
-.digilynkDark{
+
+.digilynkDark {
   background-color: var(--digilynk-dark);
 }
 
