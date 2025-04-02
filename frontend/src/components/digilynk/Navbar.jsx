@@ -64,7 +64,7 @@ export default function Navbar() {
               <li className='w-full text-center py-2'>
 
               {/* <RainbowButtonCustom intensity="subtle" className="">Let's Talk 👋</RainbowButtonCustom> */}
-              <InteractiveHoverButton intensity="subtle" className="text-black hover:text-white">Let's Talk 👋</InteractiveHoverButton>
+              <RainbowButton intensity="subtle" className="hover:scale-110 transition-all ">Let's Talk 👋</RainbowButton>
               </li>
             </ul>
           </motion.div>

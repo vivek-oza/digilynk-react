@@ -14,8 +14,8 @@ export default function () {
                 <Particles color='#000fff' size={1} ease={50} staticity={10} quantity={499} className='absolute size-full'></Particles>
                 <div className="flex flex-col justify-around space-y-2">
                     <div className='flex w-full py-8 pb-6 items-center justify-center text-4xl font-bold'>Services By Digilynk</div>
-                    <div className='grid md:grid-cols-3 w-full min-h-screen'>
-                        <div className='z-10 grid md:col-span-2 gap-2 px-2 md:pe-1 grid-cols-1 md:grid-cols-2 row-auto'>
+                    <div className='grid lg:grid-cols-3 w-full min-h-screen'>
+                        <div className='z-10 grid lg:col-span-2 gap-2 px-2 lg:pe-1 grid-cols-1 lg:grid-cols-2 row-auto'>
                             <div className='w-full bg-transparent rounded-2xl'>
                                 <FrostedCard
                                     imageSrc={serviceWebDev}
@@ -49,7 +49,7 @@ export default function () {
                                 />
                             </div> */}
                         </div>
-                        <div className='z-10 px-2 md:ps-1 pt-2 md:pt-0 rounded-2xl'>
+                        <div className='z-10 px-2 lg:ps-1 pt-2 lg:pt-0 rounded-2xl'>
                             <div className="w-full h-full bg-transparent flex items-center justify-center rounded-2xl">
                                 <img src={featuresBanner} alt="Feature Banner" className='h-auto w-full max-w-4/5' />
                             </div>
