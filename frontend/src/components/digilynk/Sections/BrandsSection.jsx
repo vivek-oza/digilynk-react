@@ -8,7 +8,7 @@ export default function BrandsSection() {
                 {/* <Particles color='#000fff' size={1} ease={100} staticity={10} quantity={99} className='absolute size-full overflow-clip'></Particles> */}
                 
                 <div className="flex items-center justify-evenly flex-col w-full">
-                    <div className='flex w-full items-center justify-center text-4xl font-bold'>BRANDS</div>
+                    <div className='flex w-full items-center justify-center text-4xl font-bold'>Brands</div>
                     <marquee speed="10" direction="left">
                     <div className='z-10 flex justify-evenly space-x-2 items-center w-full'>
                         <div className='w-56 h-20 bg-zinc-800 rounded-md'></div>

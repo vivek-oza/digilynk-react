@@ -38,11 +38,11 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --color-1: hsl(0 100% 63%);
-  --color-2: hsl(270 100% 63%);
-  --color-3: hsl(210 100% 63%);
-  --color-4: hsl(195 100% 63%);
-  --color-5: hsl(90 100% 63%);
+  --color-1: 0 100% 63%;
+  --color-2: 270 100% 63%;
+  --color-3: 210 100% 63%;
+  --color-4: 195 100% 63%;
+  --color-5: 90 100% 63%;
   --digilynk-accent: #091540;
   --digilynk-primary: #0F6BFD;
   --digilynk-secondary: #82CEFD;

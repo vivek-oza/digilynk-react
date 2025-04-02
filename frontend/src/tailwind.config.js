@@ -22,9 +22,13 @@ export default {
           "20%,50%": { opacity: "0" },
         },
         rainbow: {
-          "0%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-          "100%": { backgroundPosition: "0% 50%" },
+          "0%": { "background-position": "0%" },
+          "100%": { "background-position": "200%" },
+        },
+        
+        borderGlow: {
+          "0%, 100%": { borderImageSource: "linear-gradient(90deg, #ff7eb3, #ff758c)" },
+          "50%": { borderImageSource: "linear-gradient(90deg, #6a11cb, #2575fc)" },
         },
       },
       borderRadius: {
@@ -73,6 +77,11 @@ export default {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
+        "color-1": "hsl(var(--color-1))",
+        "color-2": "hsl(var(--color-2))",
+        "color-3": "hsl(var(--color-3))",
+        "color-4": "hsl(var(--color-4))",
+        "color-5": "hsl(var(--color-5))",
       },
       fontFamily: {
         poppins: "Poppins",
@@ -82,7 +91,8 @@ export default {
     },
     animation: {
       "caret-blink": "caret-blink 1.25s ease-out infinite",
-      "rainbow": "rainbow 2s ease infinite",
+      "rainbow": "rainbow 2s linear infinite",
+      "borderGlow": "borderGlow 3s infinite linear",
     },
   },
   plugins: [require("tailwindcss-animate"),

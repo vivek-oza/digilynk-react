@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { RainbowButtonCustom } from "../magicui/rainbow-button-custom";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
+import { RainbowButton } from "../magicui/rainbow-button";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -36,66 +37,66 @@ export default function AppointmentForm() {
 
   return (
     <div className="flex justify-center items-center  z-10 md:py-0 py-4 px-2 md:max-w-[400px] w-full">
-        <Card className=" w-full shadow-xl border-2 bg-white/20 backdrop-blur-xs">
+      <Card className=" w-full shadow-xl border-2 bg-white/20 backdrop-blur-xs">
 
-          <CardHeader className="text-center">
-            <CardTitle className="text-xl font-bold font-poppins">
-              Book an Appointment
-            </CardTitle>
-            <CardDescription>
-              We'll get back to you shortly
-            </CardDescription>
-          </CardHeader>
+        <CardHeader className="text-center">
+          <CardTitle className="text-xl font-bold font-poppins">
+            Book an Appointment
+          </CardTitle>
+          <CardDescription>
+            We'll get back to you shortly
+          </CardDescription>
+        </CardHeader>
 
-          <CardContent>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">Full Name</Label>
-                <Input
-                  id="name"
-                  {...register("name")}
-                  placeholder="John Doe"
-                  className="focus-visible:ring-[#82CEFD]"
-                />
-                {errors.name && (
-                  <p className="text-xs text-red-500">{errors.name.message}</p>
-                )}
-              </div>
+        <CardContent>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="name">Full Name</Label>
+              <Input
+                id="name"
+                {...register("name")}
+                placeholder="John Doe"
+                className="focus-visible:ring-[#82CEFD]"
+              />
+              {errors.name && (
+                <p className="text-xs text-red-500">{errors.name.message}</p>
+              )}
+            </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="phone" className="text-sm leading-none">Phone Number</Label>
-                <Input
-                  id="phone"
-                  {...register("phone")}
-                  placeholder="+91 9998887776"
-                  className="focus-visible:ring-[#82CEFD]"
-                />
-                {errors.phone && (
-                  <p className="text-xs text-red-500">{errors.phone.message}</p>
-                )}
-              </div>
+            <div className="space-y-2">
+              <Label htmlFor="phone" className="text-sm leading-none">Phone Number</Label>
+              <Input
+                id="phone"
+                {...register("phone")}
+                placeholder="+91 9998887776"
+                className="focus-visible:ring-[#82CEFD]"
+              />
+              {errors.phone && (
+                <p className="text-xs text-red-500">{errors.phone.message}</p>
+              )}
+            </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="message">Your Message</Label>
-                <Textarea
-                  id="message"
-                  {...register("message")}
-                  placeholder="Tell us about your needs..."
-                  className="focus-visible:ring-[#82CEFD] h-[30px] max-h-[80px]"
-                />
-                {errors.message && (
-                  <p className="text-xs text-red-500">{errors.message.message}</p>
-                )}
-              </div>
+            <div className="space-y-2">
+              <Label htmlFor="message">Your Message</Label>
+              <Textarea
+                id="message"
+                {...register("message")}
+                placeholder="Tell us about your needs..."
+                className="focus-visible:ring-[#82CEFD] h-[30px] max-h-[80px]"
+              />
+              {errors.message && (
+                <p className="text-xs text-red-500">{errors.message.message}</p>
+              )}
+            </div>
 
-              <div className="w-full flex justify-center">              
-                <InteractiveHoverButton>Send Message</InteractiveHoverButton>
-              </div>
+            <div className="w-full flex justify-center">
+              <InteractiveHoverButton className="hover:scale-110 transition">Send Message</InteractiveHoverButton>
+            </div>
 
-            </form>
-          </CardContent>
-        
-        </Card>
+          </form>
+        </CardContent>
+
+      </Card>
 
     </div>
   );
