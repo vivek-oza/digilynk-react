@@ -5,7 +5,7 @@ import { Particles } from '@/components/magicui/particles'
 export default function () {
   return (
     <>
-        <section className='relative rounded-2xl bg-white shadow-2xl border-2 m-4 my-10 pb-20 h-full min-h-screen'>
+        <section className='relative rounded-2xl bg-white shadow-2xl border-2 m-4 my-10 pb-2 h-full min-h-screen'>
             <Particles color='#000fff' size={1} ease={50} staticity={10} quantity={499} className='absolute size-full'></Particles>
             <div className="flex flex-col justify-around space-y-2">
                 <div className='flex w-full py-8 pb-6 items-center justify-center text-4xl font-bold'>SERVICES</div>

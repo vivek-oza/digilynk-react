@@ -10,9 +10,8 @@ export default function Home() {
   return (
     <div className='h-full flex flex-col poppins'>
       <HeroSection />
-      <BrandsSection></BrandsSection>
-      <FeaturesSection></FeaturesSection>
-      <div className='min-h-80 bg-red-100 spacerrr'></div>
+      <BrandsSection />
+      <FeaturesSection />
     </div>
   );
 }

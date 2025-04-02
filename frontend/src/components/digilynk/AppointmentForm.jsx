@@ -36,7 +36,7 @@ export default function AppointmentForm() {
 
   return (
     <div className="flex justify-center items-center  z-10 md:py-0 py-4 px-2 md:max-w-[400px] w-full">
-        <Card className=" w-full shadow-xl border-2 backdrop-blur-3xl">
+        <Card className=" w-full shadow-xl border-2 bg-white/20 backdrop-blur-xs">
 
           <CardHeader className="text-center">
             <CardTitle className="text-xl font-bold font-poppins">
