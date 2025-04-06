@@ -12,12 +12,52 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/index.css", // optional, but useful if you reference utility classes in CSS
     "./node_modules/@heroui/theme/dist/components/(button|input|ripple|spinner|form).js"
   ],
+    safelist: [
+    "animate-marquee",
+    "animate-marquee-vertical",
+    "group-hover:[animation-play-state:paused]",
+    "[animation-direction:reverse]",
+    "animate-marquee",
+    "animate-marquee-vertical",
+  ],
   theme: {
+
     extend: {
+      animation: {
+        marquee: "marquee 20s linear infinite",
+        "marquee-reverse": "marquee-reverse 20s linear infinite",
+        "marquee-vertical": "marquee-vertical 20s linear infinite",
+        "marquee-vertical-reverse": "marquee-vertical-reverse 20s linear infinite",
+        "caret-blink": "caret-blink 10s ease-in-out infinite",
+        "rainbow": "rainbow 2s linear infinite",
+        "borderGlow": "borderGlow 3s infinite linear",
+        
+      },
       keyframes: {
+        marquee: { // This should work for animate-marquee
+          from: { transform: "translateX(0%)" },
+          to: { transform: "translateX(-50%)" },
+        },
+        "marquee-reverse": {
+          from: { transform: "translateX(-50%)" },
+          to: { transform: "translateX(0%)" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0%)" },
+          to: { transform: "translateY(-50%)" },
+        },
+        "marquee-vertical-reverse": {
+          from: { transform: "translateY(-50%)" },
+          to: { transform: "translateY(0%)" },
+        },
         "caret-blink": {
+          "0%,70%,100%": { opacity: "1" },
+          "20%,50%": { opacity: "0" },
+        },
+        "scroll-horizontal": {
           "0%,70%,100%": { opacity: "1" },
           "20%,50%": { opacity: "0" },
         },
@@ -25,7 +65,6 @@ export default {
           "0%": { "background-position": "0%" },
           "100%": { "background-position": "200%" },
         },
-        
         borderGlow: {
           "0%, 100%": { borderImageSource: "linear-gradient(90deg, #ff7eb3, #ff758c)" },
           "50%": { borderImageSource: "linear-gradient(90deg, #6a11cb, #2575fc)" },
@@ -89,13 +128,14 @@ export default {
         zilla: "Zilla Slab",
       },
     },
-    animation: {
-      "caret-blink": "caret-blink 1.25s ease-out infinite",
-      "rainbow": "rainbow 2s linear infinite",
-      "borderGlow": "borderGlow 3s infinite linear",
-    },
+
   },
-  plugins: [require("tailwindcss-animate"),
-    require("@tailwindcss/typography"), 
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    plugin(function({ addVariant }) {
+      addVariant('group-hover', ':merge(.group):hover &');
+    })
   ],
+
 };

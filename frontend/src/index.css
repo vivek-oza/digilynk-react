@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tw-animate-css";
+@import "tailwindcss";
 
+@tailwind utilities;
 
 @custom-variant dark (&:is(.dark *));
 
@@ -44,9 +45,9 @@
   --color-4: 195 100% 63%;
   --color-5: 90 100% 63%;
   --digilynk-accent: #091540;
-  --digilynk-primary: #0F6BFD;
-  --digilynk-secondary: #82CEFD;
-  --digilynk-light: #FFFFFF;
+  --digilynk-primary: #0f6bfd;
+  --digilynk-secondary: #82cefd;
+  --digilynk-light: #ffffff;
   --digilynk-dark: #292930;
 }
 
@@ -182,6 +183,14 @@ html {
 }
 
 .rainbow-bg {
-  background: linear-gradient(90deg, #ff0000, #ff9900, #33cc33, #0099ff, #6633cc, #ff0066);
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff9900,
+    #33cc33,
+    #0099ff,
+    #6633cc,
+    #ff0066
+  );
   background-size: 400% 400%;
 }

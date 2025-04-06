@@ -36,7 +36,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Hamburger Button */}
-      <button 
+      <button
         className="lg:hidden p-2 focus:outline-none"
         onClick={toggleMenu}
         aria-label="Toggle menu"
@@ -47,24 +47,24 @@ export default function Navbar() {
       {/* Mobile Dropdown Menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 1, x: 999 }}
             animate={{ opacity: 1, x: 180 }}
             exit={{ opacity: 1, x: 999 }}
-            transition={{type: "tween" ,duration: 0.5 , ease: "easeOut"}}
+            transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
             className="lg:hidden absolute top-19.5 left-0 right-0 h-screen bg-black text-white backdrop-blur-3xl flex justify-start"
           >
-            <ul className='flex flex-col items-center pt-8 px-4 gap-4 font-semibold '>
+            <ul className='flex flex-col items-center pt-8 px-4 gap-4 font-semibold'>
               <li className='text-3xl font-bold flex justify-start cursor-pointer transition w-full text-center py-4'>Digilynk</li>
-              <li className='hover:text-blue-500 flex justify-start cursor-pointer transition w-full text-center py-2'>HOME</li>
+              <li className='hover:text-blue-500  flex justify-start cursor-pointer transition w-full text-center py-2'>HOME</li>
               <li className='hover:text-blue-500 flex justify-start cursor-pointer transition w-full text-center py-2'>SERVICES</li>
               <li className='hover:text-blue-500 flex justify-start cursor-pointer transition w-full text-center py-2'>ABOUT US</li>
               <li className='hover:text-blue-500 flex justify-start cursor-pointer transition w-full text-center py-2'>PRICING</li>
               <li className='hover:text-blue-500 flex justify-start cursor-pointer transition w-full text-center py-2'>CONTACT</li>
               <li className='w-full text-center py-2'>
 
-              {/* <RainbowButtonCustom intensity="subtle" className="">Let's Talk 👋</RainbowButtonCustom> */}
-              <RainbowButton intensity="subtle" className="hover:scale-110 transition-all ">Let's Talk 👋</RainbowButton>
+                {/* <RainbowButtonCustom intensity="subtle" className="">Let's Talk 👋</RainbowButtonCustom> */}
+                <RainbowButton intensity="subtle" className="hover:scale-110 hover:animate-caret-blink transition-all ">Let's Talk 👋</RainbowButton>
               </li>
             </ul>
           </motion.div>
