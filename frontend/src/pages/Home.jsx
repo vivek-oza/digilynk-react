@@ -12,7 +12,6 @@ export default function Home() {
     <div className='h-full flex flex-col poppins'>
 
       <HeroSection />
-      {/* <BrandsSection className=""/> */}
       <FeaturesMarquee></FeaturesMarquee>
       <ServicesSection />
 

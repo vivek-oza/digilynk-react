@@ -144,21 +144,21 @@ export function FeaturesMarquee() {
       </div>
       <div className="relative flex w-full flex-col items-center justify-center gap-6 overflow-hidden">
         {/* First Row */}
-        <Marquee pauseOnHover className="[--duration:25s]">
+        <Marquee pauseOnHover duration="25s">
           {firstRow.map((item, index) => (
             <FeatureCard key={`row1-${index}`} {...item} />
           ))}
         </Marquee>
 
         {/* Second Row */}
-        <Marquee reverse pauseOnHover className="[--duration:22s]">
+        <Marquee reverse pauseOnHover duration="22s">
           {secondRow.map((item, index) => (
             <FeatureCard key={`row2-${index}`} {...item} />
           ))}
         </Marquee>
 
         {/* Third Row */}
-        <Marquee pauseOnHover className="[--duration:28s]">
+        <Marquee pauseOnHover duration="28s">
           {thirdRow.map((item, index) => (
             <FeatureCard key={`row3-${index}`} {...item} />
           ))}

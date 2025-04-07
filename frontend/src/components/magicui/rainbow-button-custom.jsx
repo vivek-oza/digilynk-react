@@ -3,7 +3,10 @@
 import React from "react";
 
 export const RainbowButtonCustom = React.forwardRef(
-  ({ children, className, variant = "dark", intensity = "medium", ...props }, ref) => {
+  (
+    { children, className, variant = "dark", intensity = "medium", ...props },
+    ref
+  ) => {
     const intensityPresets = {
       subtle: {
         borderHeight: "h-0",
@@ -40,7 +43,11 @@ export const RainbowButtonCustom = React.forwardRef(
 
     return (
       <div
-        className={`relative inline-block rounded-full border-[2px]  ${variant === "dark" ? "bg-gray-900 border-gray-700" : "bg-white border-zinc-200"} ${shadow} transition-shadow duration-300 hover:shadow-xl`}
+        className={`relative inline-block rounded-full border-[2px]  ${
+          variant === "dark"
+            ? "bg-gray-900 border-gray-700"
+            : "bg-white border-zinc-200"
+        } ${shadow} hover:scale-105 transition-all duration-100`}
       >
         <button
           ref={ref}
@@ -53,14 +60,16 @@ export const RainbowButtonCustom = React.forwardRef(
           ${className}`}
           {...props}
         >
-          <span className="relative z-20 flex items-center justify-center transition-transform duration-300 group-hover:translate-y-[-2px]">
+          <span className="relative z-20 flex items-center justify-center ">
             {children}
           </span>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 opacity-0  transition-opacity duration-300 rounded-xl" />
         </button>
 
         {/* Rainbow elements with direct color values */}
-        <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 ${width} overflow-visible`}>
+        <div
+          className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 ${width} overflow-visible`}
+        >
           {/* Solid rainbow border */}
           <div
             className={`absolute bottom-0 left-0 right-0 ${borderHeight} rounded-b-lg z-10`}

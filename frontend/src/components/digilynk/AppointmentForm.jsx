@@ -3,7 +3,13 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -12,6 +18,7 @@ import { toast } from "sonner";
 import { RainbowButtonCustom } from "../magicui/rainbow-button-custom";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 import { RainbowButton } from "../magicui/rainbow-button";
+import { PulsatingButton } from "../magicui/pulsating-button";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -37,15 +44,12 @@ export default function AppointmentForm() {
 
   return (
     <div className="flex justify-center items-center  z-10 lg:py-0 py-4 px-2 lg:max-w-[400px] w-full">
-      <Card className=" w-full shadow-xl border-2 bg-white/20 backdrop-blur-xs">
-
+      <Card className="w-full shadow-xl border-2 bg-white/5 backdrop-blur-md">
         <CardHeader className="text-center">
           <CardTitle className="text-xl font-bold font-poppins">
             Book an Appointment
           </CardTitle>
-          <CardDescription>
-            We'll get back to you shortly
-          </CardDescription>
+          <CardDescription>We'll get back to you shortly</CardDescription>
         </CardHeader>
 
         <CardContent>
@@ -64,7 +68,9 @@ export default function AppointmentForm() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="phone" className="text-sm leading-none">Phone Number</Label>
+              <Label htmlFor="phone" className="text-sm leading-none">
+                Phone Number
+              </Label>
               <Input
                 id="phone"
                 {...register("phone")}
@@ -90,14 +96,13 @@ export default function AppointmentForm() {
             </div>
 
             <div className="w-full flex justify-center">
-              <InteractiveHoverButton className="hover:scale-110 transition">Send Message</InteractiveHoverButton>
+              <RainbowButtonCustom className="">
+                Send Message
+              </RainbowButtonCustom>
             </div>
-
           </form>
         </CardContent>
-
       </Card>
-
     </div>
   );
 }
