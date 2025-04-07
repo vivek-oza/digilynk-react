@@ -7,7 +7,7 @@ import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import { RainbowButtonCustom } from "../magicui/rainbow-button-custom";
 import { RainbowButton } from "../magicui/rainbow-button";
-import { PulsatingButton } from "../magicui/pulsating-button";
+import { PulsatingButtonCustom } from "../magicui/PulsatingButtonCustom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,16 +43,14 @@ export default function Navbar() {
           </li>
         </ul>
         {/* <RainbowButtonCustom intensity="subtle">Let's Talk 👋</RainbowButtonCustom> */}
-        <PulsatingButton
-          intensity="subtle"
-          className="hover:scale-110 border animate-borderGlow "
+
+        <PulsatingButtonCustom
+          pulseColor="#0096ff" // Any hex color
+          duration="3s" // Animation duration
+          variant="dark" // "dark" or "light"
         >
           Let's Talk 👋
-        </PulsatingButton>
-
-        <RainbowButtonCustom theme="light" intensity="high" className="">
-          Let's Talk 👋
-        </RainbowButtonCustom>
+        </PulsatingButtonCustom>
       </div>
 
       {/* Mobile Hamburger Button */}

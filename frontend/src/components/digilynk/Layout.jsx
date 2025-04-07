@@ -7,11 +7,11 @@ import { ScrollProgress } from '../magicui/scroll-progress';
 const Layout = () => {
   return (
     <>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col bg-slate-100 min-h-screen">
         <Navbar />
         <ScrollProgress className="h-1 top-[calc(5rem)]" />
         <main className="flex-1 pt-20 h-[calc(100vh-5rem)]">
-          <Outlet className="bg-cyan-400" /> {/* This is where child routes will render */}
+          <Outlet className="" /> {/* This is where child routes will render */}
         </main>
       </div>
     </>

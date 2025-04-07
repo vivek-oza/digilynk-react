@@ -7,6 +7,7 @@ import {
 import { CheckCircle } from "lucide-react";
 import { RainbowButton } from "../magicui/rainbow-button";
 import { CardDescription, CardTitle } from "./card-hover-effect";
+import { RainbowButtonCustom } from "../magicui/rainbow-button-custom";
 
 const FrostedCard = ({ imageSrc, imgHeight, title, bulletPoints = [] }) => {
   return (
@@ -38,9 +39,9 @@ const FrostedCard = ({ imageSrc, imgHeight, title, bulletPoints = [] }) => {
         </CardContent>
 
         <CardFooter className="flex items-center justify-center ">
-          <RainbowButton className={"hover:scale-110 transition-all"}>
+          <RainbowButtonCustom className={"hover:scale-110 transition-all"}>
             View more 👀
-          </RainbowButton>
+          </RainbowButtonCustom>
         </CardFooter>
       </div>
     </Card>

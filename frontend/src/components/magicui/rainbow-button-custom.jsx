@@ -1,96 +1,46 @@
 "use client";
 
 import React from "react";
+import { cn } from "@/lib/utils";
 
 export const RainbowButtonCustom = React.forwardRef(
-  (
-    { children, className, variant = "dark", intensity = "medium", ...props },
-    ref
-  ) => {
-    const intensityPresets = {
-      subtle: {
-        borderHeight: "h-0",
-        glowHeight: "h-[12px]",
-        glowBlur: "blur-[12px]",
-        glowOpacity: "opacity-90",
-        width: "w-2/3",
-        shadow: "shadow-sm",
-      },
-      medium: {
-        borderHeight: "h-0",
-        glowHeight: "h-[16px]",
-        glowBlur: "blur-[16px]",
-        glowOpacity: "opacity-95",
-        width: "w-2/3",
-        shadow: "shadow-md",
-      },
-      bold: {
-        borderHeight: "h-0",
-        glowHeight: "h-[20px]",
-        glowBlur: "blur-[20px]",
-        glowOpacity: "opacity-100",
-        width: "w-2/3",
-        shadow: "shadow-lg",
-      },
-    };
-
-    const { borderHeight, glowHeight, glowBlur, glowOpacity, width, shadow } =
-      intensityPresets[intensity] || intensityPresets.medium;
-
-    // Direct HSL color values for a guaranteed rainbow effect
-    const rainbowGradient =
-      "linear-gradient(90deg, #FF0000, #FF8000, #FFFF00, #00FF00, #0000FF, #8000FF, #FF00FF)";
-
+  ({ children, className, variant = "dark", ...props }, ref) => {
     return (
-      <div
-        className={`relative inline-block rounded-full border-[2px]  ${
-          variant === "dark"
-            ? "bg-gray-900 border-gray-700"
-            : "bg-white border-zinc-200"
-        } ${shadow} hover:scale-105 transition-all duration-100`}
+      <button
+        ref={ref}
+        className={cn(
+          "group relative inline-flex h-11 cursor-pointer items-center justify-center rounded-xl border-0 bg-[length:200%] px-8 py-2 font-medium transition-colors [background-clip:padding-box,border-box,border-box] [background-origin:border-box] [border:calc(0.08*1rem)_solid_transparent] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+          // Base gradient and colors
+          `${
+            variant === "dark"
+              ? "text-white bg-[linear-gradient(#121213,#121213),linear-gradient(#121213_50%,rgba(18,18,19,0.6)_80%,rgba(18,18,19,0)),linear-gradient(90deg,#FF0080,#FF5E3A,#00FF00,#00FFFF,#7928CA)]"
+              : "text-gray-900 bg-[linear-gradient(#fff,#fff),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,#FF0080,#FF5E3A,#00FF00,#00FFFF,#7928CA)]"
+          }`,
+          // Glow effect
+          "before:absolute before:bottom-[-20%] before:left-1/2 before:z-0 before:h-1/7 before:w-3/5 before:-translate-x-1/2 before:bg-[linear-gradient(90deg,#FF0080,#FF5E3A,#00FF00,#00FFFF,#7928CA)] before:[filter:blur(calc(0.8*1rem))]",
+          // Additional hover effects
+          "hover:scale-[1.02] active:scale-[0.98] transition-transform duration-200",
+          className
+        )}
+        style={{
+          animation: "rainbow 3s linear infinite",
+          "--tw-gradient-from": "#FF0080",
+          "--tw-gradient-via": "#FF5E3A #00FF00 #00FFFF",
+          "--tw-gradient-to": "#7928CA",
+        }}
+        {...props}
       >
-        <button
-          ref={ref}
-          className={`relative z-10 w-full h-12 flex items-center justify-center px-8 py-2 
-          font-medium transition-all duration-300 focus:outline-none focus:ring-2 
-          disabled:pointer-events-none disabled:opacity-50 overflow-visible
-          cursor-pointer rounded-full
-          ${variant === "dark" ? "text-white" : "text-gray-900"}
-          group
-          ${className}`}
-          {...props}
-        >
-          <span className="relative z-20 flex items-center justify-center ">
-            {children}
-          </span>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 opacity-0  transition-opacity duration-300 rounded-xl" />
-        </button>
-
-        {/* Rainbow elements with direct color values */}
+        <span className="relative z-10">{children}</span>
         <div
-          className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 ${width} overflow-visible`}
-        >
-          {/* Solid rainbow border */}
-          <div
-            className={`absolute bottom-0 left-0 right-0 ${borderHeight} rounded-b-lg z-10`}
-            style={{
-              background: rainbowGradient,
-              backgroundSize: "200% 100% 50%",
-              animation: "rainbow 2s linear infinite",
-            }}
-          />
-
-          {/* Glow effect */}
-          <div
-            className={`absolute -bottom-1 left-0 right-0 ${glowHeight} ${glowBlur} ${glowOpacity} rounded-b-lg z-0 transition-all duration-500 group-hover:opacity-100`}
-            style={{
-              background: rainbowGradient,
-              backgroundSize: "200% 100%",
-              animation: "rainbow 2s linear infinite",
-            }}
-          />
-        </div>
-      </div>
+          className="absolute bottom-[-20%] left-1/2 z-0 h-1/5 w-3/5 -translate-x-1/2 blur-[calc(0.8*1rem)]"
+          style={{
+            background:
+              "linear-gradient(90deg, #FF0080, #FF5E3A, #00FF00, #00FFFF, #7928CA)",
+            backgroundSize: "200% 100%",
+            animation: "rainbow 3s linear infinite",
+          }}
+        />
+      </button>
     );
   }
 );

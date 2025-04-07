@@ -121,11 +121,11 @@ const FeatureCard = ({ title, desc, img }) => {
     <div
       className={cn(
         "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        "border-gray-950/[.1] bg-white hover:bg-gray-950/[.05]",
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
     >
-      <div className="flex flex-row items-center gap-3">
+      <div className="flex flex-row  items-center gap-3">
         <img className="rounded-full" width="32" height="32" alt="" src={img} />
         <div className="flex flex-col">
           <div className="text-sm font-medium dark:text-white">{title}</div>
@@ -139,8 +139,8 @@ const FeatureCard = ({ title, desc, img }) => {
 export function FeaturesMarquee() {
   return (
     <section className="my-20">
-      <div className="flex w-full items-center justify-center pb-16 text-4xl font-bold">
-        Overview of Digilynk
+      <div className="flex w-full  items-center justify-center pb-16 text-2xl md:text-4xl font-bold">
+        What we offer at Digilynk
       </div>
       <div className="relative flex w-full flex-col items-center justify-center gap-6 overflow-hidden">
         {/* First Row */}

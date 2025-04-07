@@ -25,8 +25,10 @@ export default {
         "marquee-vertical-reverse":
           "marquee-vertical-reverse 20s linear infinite",
         "caret-blink": "caret-blink 1.2s ease-out infinite",
-        rainbow: "rainbow 2s linear infinite",
+        rainbow: "rainbow 3s linear infinite",
+        "rainbow-glow": "rainbow-glow 3s linear infinite",
         borderGlow: "borderGlow 3s infinite linear",
+        pulse: "pulse var(--duration) ease-out infinite",
       },
       keyframes: {
         marquee: {
@@ -50,8 +52,14 @@ export default {
           "20%,50%": { opacity: "0" },
         },
         rainbow: {
-          "0%": { "background-position": "0%" },
-          "100%": { "background-position": "200%" },
+          "0%": { backgroundPosition: "0 0" },
+          "50%": { backgroundPosition: "100% 0" },
+          "100%": { backgroundPosition: "0 0" },
+        },
+        "rainbow-glow": {
+          "0%": { backgroundPosition: "0 0" },
+          "50%": { backgroundPosition: "100% 0" },
+          "100%": { backgroundPosition: "0 0" },
         },
         borderGlow: {
           "0%, 100%": {
@@ -60,6 +68,10 @@ export default {
           "50%": {
             "border-image-source": "linear-gradient(90deg, #6a11cb, #2575fc)",
           },
+        },
+        pulse: {
+          "0%, 100%": { boxShadow: "0 0 0 0 var(--pulse-color)" },
+          "50%": { boxShadow: "0 0 0 8px var(--pulse-color)" },
         },
       },
       borderRadius: {

@@ -14,11 +14,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
+import toast from "react-hot-toast";
 import { RainbowButtonCustom } from "../magicui/rainbow-button-custom";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 import { RainbowButton } from "../magicui/rainbow-button";
-import { PulsatingButton } from "../magicui/pulsating-button";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -97,7 +96,7 @@ export default function AppointmentForm() {
 
             <div className="w-full flex justify-center">
               <RainbowButtonCustom className="">
-                Send Message
+                Book
               </RainbowButtonCustom>
             </div>
           </form>
