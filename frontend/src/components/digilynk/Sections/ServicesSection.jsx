@@ -4,6 +4,7 @@ import { Particles } from "@/components/magicui/particles";
 import featuresBanner from "../../../assets/images/featuresBanner.png";
 import serviceWebDev from "../../../assets/images/serviceWebDev.png";
 import serviceQA from "../../../assets/images/serviceQA.png";
+import serviceDigital from "../../../assets/images/serviceDigital.png";
 
 import FrostedCard from "@/components/ui/FrostedCard";
 
@@ -57,7 +58,7 @@ export default function () {
               </div>
               <div className="w-full  rounded-2xl   ">
                 <FrostedCard
-                  imageSrc={serviceWebDev}
+                  imageSrc={serviceDigital}
                   imgHeight="300px"
                   title="Digital Marketing"
                   bulletPoints={[

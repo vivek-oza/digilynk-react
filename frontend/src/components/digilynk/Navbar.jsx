@@ -25,7 +25,7 @@ export default function Navbar() {
 
       {/* Desktop Navigation */}
       <div className="hidden lg:flex items-center gap-10">
-        <ul className="flex font-semibold text-xs gap-x-2">
+        <ul className="flex font-semibold text-sm gap-x-2">
           <li className="hover:bg-zinc-800 hover:text-white px-3 py-2 rounded-md hover:border-b-blue-500   cursor-pointer transition">
             HOME
           </li>
@@ -48,6 +48,7 @@ export default function Navbar() {
           pulseColor="#0096ff" // Any hex color
           duration="3s" // Animation duration
           variant="dark" // "dark" or "light"
+          className="text-xl"
         >
           Let's Talk 👋
         </PulsatingButtonCustom>
@@ -70,9 +71,9 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 180 }}
             exit={{ opacity: 1, x: 999 }}
             transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
-            className="lg:hidden absolute top-19.5 left-0 right-0 h-screen bg-black text-white backdrop-blur-3xl flex justify-start"
+            className="lg:hidden absolute top-[calc(5rem+2px)] left-0 right-0 h-[calc(100vh+2px)] bg-black text-white backdrop-blur-3xl flex justify-start"
           >
-            <ul className="flex flex-col items-center pt-8 px-4 gap-4 font-semibold">
+            <ul className="flex flex-col items-center pt-8 px-6 gap-4 font-semibold">
               <li className="text-3xl font-bold flex justify-start cursor-pointer transition w-full text-center py-4">
                 Digilynk
               </li>
@@ -92,11 +93,9 @@ export default function Navbar() {
                 CONTACT
               </li>
               <li className="w-full text-center py-2">
-                <RainbowButtonCustom intensity="subtle" className="">
+                <PulsatingButtonCustom intensity="low" className="text-xl">
                   Let's Talk 👋
-                </RainbowButtonCustom>
-                {/* <RainbowButton intensity="subtle" className="hover:scale-110 hover:animate-caret-blink transition-all ">Let's Talk 👋</RainbowButton> */}
-                {/* <PulsatingButton intensity="subtle" className="hover:scale-110 hover:animate-caret-blink transition-all ">Let's Talk 👋</PulsatingButton> */}
+                </PulsatingButtonCustom>
               </li>
             </ul>
           </motion.div>
