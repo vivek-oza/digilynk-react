@@ -43,7 +43,7 @@ export default function AppointmentForm() {
 
   return (
     <div className="flex justify-center items-center  z-10 lg:py-0 py-4 px-2 lg:max-w-[400px] w-full">
-      <Card className="w-full shadow-xl border-2 bg-white/5 backdrop-blur-md">
+      <Card className="w-full shadow-xl border-2 bg-white/10 backdrop-blur-sm">
         <CardHeader className="text-center">
           <CardTitle className="text-xl font-bold font-poppins">
             Book an Appointment
@@ -95,8 +95,8 @@ export default function AppointmentForm() {
             </div>
 
             <div className="w-full flex justify-center">
-              <RainbowButtonCustom className="">
-                Book
+              <RainbowButtonCustom className="hover:scale-110 transition-all">
+                Send message
               </RainbowButtonCustom>
             </div>
           </form>

@@ -11,7 +11,7 @@ import { RainbowButtonCustom } from "../magicui/rainbow-button-custom";
 
 const FrostedCard = ({ imageSrc, imgHeight, title, bulletPoints = [] }) => {
   return (
-    <Card className="relative flex justify-start h-full py-6 rounded-2xl border-2 overflow-hidden bg-white/5 backdrop-blur-md shadow-lg border-gradient animate-border">
+    <Card className="relative flex justify-start h-full py-6 rounded-2xl border-2 overflow-hidden bg-white/5 backdrop-blur-sm shadow-lg border-gradient animate-border">
       <CardHeader
         className={" mx-6 px-0 rounded-xl hover:scale-105 transition-all"}
       >
