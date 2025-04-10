@@ -21,7 +21,7 @@ export const LampContainer = ({
                     whileInView={{ opacity: 1, width: "20rem" }}
                     transition={{
                         delay: 0.3,
-                        duration: 0.8,
+                        duration: 1,
                         ease: "easeInOut",
                     }}
                     style={{
@@ -37,7 +37,7 @@ export const LampContainer = ({
                     whileInView={{ opacity: 1, width: "20rem" }}
                     transition={{
                         delay: 0.3,
-                        duration: 0.8,
+                        duration: 1,
                         ease: "easeInOut",
                     }}
                     style={{
@@ -56,7 +56,7 @@ export const LampContainer = ({
                     whileInView={{ width: "16rem" }}
                     transition={{
                         delay: 0.3,
-                        duration: 0.8,
+                        duration: 1,
                         ease: "easeInOut",
                     }}
                     className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-cyan-400 blur-2xl"
@@ -66,7 +66,7 @@ export const LampContainer = ({
                     whileInView={{ width: "20rem" }}
                     transition={{
                         delay: 0.3,
-                        duration: 0.8,
+                        duration: 1,
                         ease: "easeInOut",
                     }}
                     className="absolute inset-auto z-50 h-0.5 w-[20rem] -translate-y-[7rem] bg-cyan-400"
