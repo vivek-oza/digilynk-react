@@ -11,39 +11,25 @@ import { RainbowButtonCustom } from "../magicui/rainbow-button-custom";
 
 const FrostedCard = ({ imageSrc, imgHeight, title, bulletPoints = [] }) => {
   return (
-    <Card className="relative flex justify-start h-full py-6 rounded-2xl border-2 overflow-hidden bg-white/5 backdrop-blur-sm shadow-lg border-gradient animate-border">
-      <CardHeader
-        className={" mx-6 px-0 rounded-xl hover:scale-105 transition-all"}
-      >
-        <CardDescription className={"mt-auto"}>
-          <span className="w-auto" style={{ height: imgHeight }}>
-            <img
-              src={imageSrc}
-              alt="Card Image"
-              className="w-auto h-full object-cover mx-auto rounded-xl"
-            />
-          </span>
-        </CardDescription>
-      </CardHeader>
-      <div className="flex flex-col lg:space-y-3 h-full justify-between">
-        <CardContent className="mt-4 space-y-2 ">
-          <CardTitle className="text-2xl font-bold text-black text-center mt-4">
-            {title}
-          </CardTitle>
-          {bulletPoints.map((point, index) => (
-            <div key={index} className="flex space-x-2">
-              <CheckCircle className="text-green-500" size={20} />
-              <span className="">{point}</span>
-            </div>
-          ))}
-        </CardContent>
+    <Card className=" relative flex justify-start rounded-2xl border-2 bg-white/5 backdrop-blur-sm shadow-lg">
 
-        <CardFooter className="flex items-center justify-center ">
-          <RainbowButtonCustom className={"hover:scale-110 transition-all"}>
-            View more 👀
-          </RainbowButtonCustom>
-        </CardFooter>
-      </div>
+      <CardContent className="space-y-4 ">
+        <CardTitle className="text-2xl mt-0 font-bold text-zinc-800 text-center">
+          {title}
+        </CardTitle>
+        {bulletPoints.map((point, index) => (
+          <div key={index} className="flex space-x-2">
+            <CheckCircle className="text-green-500" size={20} />
+            <span className="">{point}</span>
+          </div>
+        ))}
+      </CardContent>
+
+      <CardFooter className="flex items-center justify-center ">
+        <RainbowButtonCustom className={"hover:scale-110 transition-all"}>
+          View more 👀
+        </RainbowButtonCustom>
+      </CardFooter>
     </Card>
   );
 };

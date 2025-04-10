@@ -14,38 +14,12 @@ import { FlickeringGrid } from "../../magicui/flickering-grid";
 export default function () {
   return (
     <>
-      <section className="relative rounded-2xl bg-white shadow-2xl m-2 my-10 px-2 pb-2 h-full min-h-screen">
-        {/* <Particles
-          color="#000fff"
-          size={1}
-          ease={50}
-          staticity={10}
-          quantity={499}
-          className="absolute size-full"
-        ></Particles> */}
-        <FlickeringGrid
-          className="absolute pt-6 mx-auto z-0 size-full w-full"
-          squareSize={5}
-          gridGap={18}
-          color="#000"
-          maxOpacity={0.3}
-          flickerChance={0.3}
-        />
-        <div className="flex flex-col justify-around space-y-2">
-          <div className="flex w-full py-4 pt-7 md:py-8 md:pt-11 items-center justify-center text-2xl md:text-4xl font-bold">
+      <section className="relative rounded-2xl bg-white shadow-2xl m-2 my-10 p-5 py-16">
+        <div className="flex flex-col justify-around  ">
+          <div className="flex w-full items-center justify-center pb-16 text-2xl md:text-4xl font-bold">
             Services By Digilynk
           </div>
-          <div className="grid lg:grid-cols-1  pb-14 grid-cols-1 gap-y-4 w-full min-h-screen">
-            <div className="z-10 px-2 lg:ps-1 py-6 pt-0 rounded-2xl">
-              <div className="w-full h-full bg-transparent flex items-center justify-center rounded-2xl">
-                <img
-                  src={servicesBanner2}
-                  alt="Feature Banner"
-                  className="h-auto w-full max-w-4/5"
-                />
-              </div>
-            </div>
-            <div className="z-10 grid grid-cols-1 lg:grid-cols-3 lg:col-span-2 gap-4 lg:gap-2 px-2 row-auto">
+          <div className="z-10 grid grid-cols-1 lg:grid-cols-3 lg:col-span-2 gap-4 lg:gap-10 row-auto">
               <div className="w-full bg-transparent rounded-2xl">
                 <FrostedCard
                   imageSrc={serviceWebDev}
@@ -91,24 +65,8 @@ export default function () {
                   ]}
                 />
               </div>
-              {/* <div className='w-full  rounded-2xl bg-blue-200'>
-                                <FrostedCard
-                                    imageSrc={serviceQA}
-                                    imgHeight="300px"
-                                    title="Web development"
-                                    bulletPoints={["Latest Tech Stack used", "Attractive and optimized UI/UX", "Safe and secure development"]}
-                                />
-                            </div> */}
             </div>
-          </div>
-          {/* <div className="z-10 mx-2 rounded-md relative">
-            <div className="flex py-8 items-center justify-center text-2xl md:text-4xl font-bold">
-              Why Choose Digilynk?
-            </div>
-            <div className="rounded-md w-full h-96">
-              <h1>Work in progress...</h1>
-            </div>
-          </div> */}
+
         </div>
       </section>
     </>

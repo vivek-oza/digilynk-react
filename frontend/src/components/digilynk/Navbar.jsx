@@ -8,24 +8,25 @@ import { Squash as Hamburger } from "hamburger-react";
 import { RainbowButtonCustom } from "../magicui/rainbow-button-custom";
 import { RainbowButton } from "../magicui/rainbow-button";
 import { PulsatingButtonCustom } from "../magicui/PulsatingButtonCustom";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 h-20 flex shadow-xl shadow-black/10 border-b-2 items-center justify-between p-2 px-4 sm:px-12  border-gray-500 bg-white/25 backdrop-blur-3xl z-50">
-      <div className="flex items-center gap-x-2 text-2xl font-semibold">
+    <nav className="fixed top-0 left-0 right-0 h-20 flex shadow-xl shadow-black/10 bg-white/40 border-b-2 items-center justify-between p-2 px-4 sm:px-12  border-gray-500 backdrop-blur-3xl z-50">
+      <div className="flex  items-center gap-x-2 text-2xl font-semibold">
         <img src={logo} className="size-12" alt="LOGO" />
-        <span className="inline text-3xl font-bold">Digilynk</span>
+        <span className="inline text-3xl font-bold text-zinc-800">Digilynk</span>
       </div>
 
       {/* Desktop Navigation */}
       <div className="hidden lg:flex items-center gap-10">
-        <ul className="flex font-semibold text-sm gap-x-2">
+        <ul className="flex font-semibold text-zinc-800 text-sm gap-x-2">
           <li className="hover:bg-zinc-800 hover:text-white px-3 py-2 rounded-md hover:border-b-blue-500   cursor-pointer transition">
             HOME
           </li>
@@ -38,20 +39,27 @@ export default function Navbar() {
           <li className="hover:bg-zinc-800 hover:text-white px-3 py-2 rounded-md hover:border-b-blue-500   cursor-pointer transition">
             PRICING
           </li>
-          <li className="hover:bg-zinc-800 hover:text-white px-3 py-2 rounded-md hover:border-b-blue-500   cursor-pointer transition">
+          {/* <li className="hover:bg-zinc-800 hover:text-white px-3 py-2 rounded-md hover:border-b-blue-500   cursor-pointer transition">
             CONTACT
-          </li>
+          </li> */}
         </ul>
-        {/* <RainbowButtonCustom intensity="subtle">Let's Talk 👋</RainbowButtonCustom> */}
 
-        <PulsatingButtonCustom
+        {/* <PulsatingButtonCustom
           pulseColor="#0096ff" // Any hex color
           duration="3s" // Animation duration
           variant="dark" // "dark" or "light"
           className="text-xl"
         >
-          Let's Talk 👋
-        </PulsatingButtonCustom>
+          Let's Talk
+        </PulsatingButtonCustom> */}
+
+        <RainbowButtonCustom
+          onClick={() => {
+            navigate("/Contacts");
+          }}
+        >
+          CONTACT
+        </RainbowButtonCustom>
       </div>
 
       {/* Mobile Hamburger Button */}
@@ -94,7 +102,7 @@ export default function Navbar() {
               </li>
               <li className="w-full text-center py-2">
                 <PulsatingButtonCustom intensity="low" className="text-xl">
-                  Let's Talk 👋
+                  Let's Talk
                 </PulsatingButtonCustom>
               </li>
             </ul>
