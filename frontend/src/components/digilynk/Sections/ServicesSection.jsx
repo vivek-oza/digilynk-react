@@ -14,7 +14,7 @@ import { FlickeringGrid } from "../../magicui/flickering-grid";
 export default function () {
   return (
     <>
-      <section className="relative rounded-2xl bg-white shadow-2xl m-2 my-10 p-5 py-16">
+      <section className="relative rounded-2xl bg-slate-100 shadow-2xl m-2 mb-20 p-5 py-16">
         <div className="flex flex-col justify-around  ">
           <div className="flex w-full items-center justify-center pb-16 text-2xl md:text-4xl font-bold">
             Services By Digilynk

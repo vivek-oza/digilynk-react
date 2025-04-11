@@ -14,10 +14,7 @@ export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   const navigate = useNavigate();
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle('dark');
-  };
+
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -33,23 +30,24 @@ export default function Navbar() {
   const navLinks = [
     { name: "HOME", href: "#home" },
     { name: "SERVICES", href: "#services" },
-    { name: "ABOUT US", href: "#about" },
+    { name: "ABOUT", href: "#about" },
     { name: "PRICING", href: "#pricing" },
   ];
 
   const handleContactClick = () => {
-    navigate("/contact");
+    navigate("/Contacts");
     setIsOpen(false);
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 h-20 flex shadow-xl shadow-black/10 ${darkMode ? 'bg-slate-950 border-gray-700' : 'bg-slate-200 border-gray-500'} border-b-2 items-center justify-between p-2 px-4 sm:px-12 backdrop-blur-3xl z-50 transition-all duration-1000`}>
+    <nav className={`fixed top-0 left-0 right-0 h-20 flex shadow-xl shadow-black/10 ${darkMode ? 'bg-slate-950 border-gray-700' : 'bg-zinc-50 border-gray-500'} border-b-2 items-center justify-between p-2 px-4 sm:px-12 backdrop-blur-3xl z-50 transition-all duration-1000`}>
       {/* Logo and Brand */}
-      <div className="flex items-center gap-x-2 text-2xl font-semibold">
-        <img src={darkMode ? logoLight : logo} className="md:size-12 size-8 transition-all duration-1000" alt="LOGO" />
+      <div className="flex items-center gap-x-2 font-semibold">
+        <img src={logo} className="md:size-12 size-8 transition-all duration-1000" alt="LOGO" />
         <span className={`inline transition-all duration-1000 md:text-3xl font-bold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
           Digilynk
         </span>
+
       </div>
 
       {/* Desktop Navigation */}
@@ -67,19 +65,11 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-4">
-          <button
-            onClick={toggleDarkMode}
-            className={`p-2 rounded-full ${darkMode ? 'bg-gray-700 text-yellow-300' : 'bg-gray-200 text-gray-700'}`}
-            aria-label="Toggle dark mode"
-          >
-            {darkMode ? <LucideSun /> : <LucideMoon />}
-          </button>
-
           <PulsatingButtonCustom
-            pulseColor={darkMode ? "#3b82f6" : "#0096ff"}
+
             duration="3s"
             variant={darkMode ? "light" : "dark"}
-            className="text-xl"
+            className="text-sm font-semibold"
             onClick={handleContactClick}
           >
             CONTACT
@@ -89,13 +79,6 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div className="lg:hidden flex items-center gap-4">
-        <button
-          onClick={toggleDarkMode}
-          className={`p-2 rounded-full ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-200 text-gray-700'}`}
-          aria-label="Toggle dark mode"
-        >
-          {darkMode ? <LucideSun /> : <LucideMoon />}
-        </button>
 
         <button
           className="focus:outline-none"
@@ -122,7 +105,7 @@ export default function Navbar() {
             className={`lg:hidden absolute top-[calc(5rem)] right-0 w-64 h-[calc(100vh)] ${darkMode ? 'bg-slate-950' : 'bg-white'} text-white backdrop-blur-3xl flex justify-start mobile-menu-container`}
           >
             <ul className="flex flex-col items-start pt-8 px-6 gap-4 font-semibold w-full">
-              <li className="text-3xl font-bold flex justify-start cursor-pointer transition w-full text-left py-4">
+              <li className="text-3xl text-zinc-800 font-bold flex justify-start cursor-pointer transition w-full text-left py-4">
                 Digilynk
               </li>
               {navLinks.map((link) => (
@@ -137,7 +120,7 @@ export default function Navbar() {
                   {link.name}
                 </li>
               ))}
-              <li className="w-full text-left py-2">
+              {/* <li className="w-full text-left py-2">
                 <PulsatingButtonCustom
                   intensity="low"
                   className="text-xl w-full"
@@ -146,7 +129,7 @@ export default function Navbar() {
                 >
                   CONTACT
                 </PulsatingButtonCustom>
-              </li>
+              </li> */}
             </ul>
           </motion.div>
         )}

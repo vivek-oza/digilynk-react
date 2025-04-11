@@ -9,8 +9,8 @@ export const PulsatingButtonCustom = React.forwardRef(
       children,
       className,
       variant = "dark",
-      pulseColor = "#0096ff",
-      duration = "1.5s",
+      pulseColor = "#000",
+      duration = "2.5s",
       ...props
     },
     ref
@@ -19,11 +19,10 @@ export const PulsatingButtonCustom = React.forwardRef(
       <button
         ref={ref}
         className={cn(
-          `relative flex cursor-pointer items-center justify-center rounded-lg px-4 py-2 text-center
-          ${
-            variant === "dark"
-              ? "bg-gray-900 text-white"
-              : "bg-white text-gray-900"
+          `relative flex cursor-pointer items-center justify-center rounded-lg px-3 py-2 text-center
+          ${variant === "dark"
+            ? "bg-gray-900 text-white"
+            : "bg-white text-gray-900"
           }
           hover:scale-105 transition-all duration-100`,
           className

@@ -1,5 +1,6 @@
 import React from "react";
 import digiLynkLight from "../../../assets/icons/digilynk_light.png";
+import digiLynkDark from "../../../assets/icons/digilynk_dark.png";
 import {
   Linkedin,
   Instagram,
@@ -11,20 +12,20 @@ import {
 export default function Footer() {
   return (
     <>
-      <footer className="bg-zinc-800 px-4 sm:px-6 py-12 text-white w-full rounded-t-3xl">
+      <footer className="bg-slate-100 px-4 sm:px-6 py-12 text-black w-full rounded-t-3xl">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {/* Brand Section */}
             <div className="flex flex-col items-center md:items-start space-y-4">
               <div className="flex flex-col items-center md:items-start space-y-3">
                 <img
-                  src={digiLynkLight}
+                  src={digiLynkDark}
                   className="w-16 h-16 md:w-20 md:h-20"
                   alt="Digilynk Logo"
                 />
                 <h1 className="text-2xl md:text-3xl font-bold">Digilynk</h1>
               </div>
-              <p className="text-sm md:text-base text-center md:text-left text-gray-300 max-w-md">
+              <p className="text-sm md:text-base text-center md:text-left text-gray-600 max-w-md">
                 Transforming ideas into digital reality. We provide innovative
                 solutions for your business needs.
               </p>

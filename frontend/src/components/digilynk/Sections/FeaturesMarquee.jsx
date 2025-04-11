@@ -117,13 +117,13 @@ const FeatureCard = ({ title, desc, img }) => {
 export function FeaturesMarquee() {
   return (
     <section className="my-20">
-      <div className="flex w-full items-center justify-center pb-16 text-2xl md:text-4xl font-bold">
+      <div className="flex w-full items-center justify-center pb-10 text-2xl md:text-4xl font-bold">
         What we offer at Digilynk
       </div>
       <div className="relative">
         {/* Gradient overlays for the entire container */}
-        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-slate-100 via-slate-100/50 to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-slate-100 via-slate-100/50 to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-white via-white/50 to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-white via-white/50 to-transparent" />
 
         {/* Marquee container */}
         <div className="relative flex w-full flex-col items-center justify-center gap-6 overflow-hidden bg-slate-100/30">

@@ -21,20 +21,7 @@ export function Marquee({
         className
       )}
     >
-      {/* Horizontal gradients */}
-      {!vertical && (
-        <>
-          <div className="absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-zinc-900 via-zinc-900/50 to-transparent" />
-          <div className="absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-zinc-900 via-zinc-900/50 to-transparent" />
-        </>
-      )}
-      {/* Vertical gradients */}
-      {vertical && (
-        <>
-          <div className="absolute left-0 top-0 z-10 h-32 w-full bg-gradient-to-b from-zinc-900 via-zinc-900/50 to-transparent" />
-          <div className="absolute left-0 bottom-0 z-10 h-32 w-full bg-gradient-to-t from-zinc-900 via-zinc-900/50 to-transparent" />
-        </>
-      )}
+
       {Array(repeat)
         .fill(0)
         .map((_, i) => (
