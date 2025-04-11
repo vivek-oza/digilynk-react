@@ -22,7 +22,7 @@ export default function HeroSection() {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="mt-8 bg-gradient-to-br p-2 from-slate-500 via-slate-500 to-slate-700 dark:from-slate-300 dark:via-slate-100 dark:to-slate-50 text-transparent bg-clip-text text-center text-5xl font-medium tracking-tight md:text-7xl"
+            className="mt-8 bg-gradient-to-br p-2 from-slate-700 via-slate-800 to-slate-950 dark:from-blue-200 dark:to-blue-50 text-transparent bg-clip-text text-center text-5xl font-medium tracking-tight md:text-7xl"
           >
             Welcome to <br /> Digilynk
           </motion.h1>
