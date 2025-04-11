@@ -100,6 +100,8 @@
 
 * {
   box-sizing: border-box;
+  transition: all;
+  transition-duration: 300;
 }
 
 html {
@@ -127,14 +129,61 @@ html {
 }
 
 .rainbow-bg {
-  background: linear-gradient(
-    90deg,
-    #ff0000,
-    #ff9900,
-    #33cc33,
-    #0099ff,
-    #6633cc,
-    #ff0066
-  );
+  background: linear-gradient(90deg,
+      #ff0000,
+      #ff9900,
+      #33cc33,
+      #0099ff,
+      #6633cc,
+      #ff0066);
   background-size: 400% 400%;
+}
+
+
+/* Add to your global CSS */
+@keyframes mouseScroll {
+  0% {
+    transform: translate(-50%, 10px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(-50%, 40px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, 80px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-mouseScroll {
+  animation: mouseScroll 2s linear infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 4s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+  .mouse {
+    height: 72.6px;
+    width: 36.3px;
+  }
+
+  .move {
+    height: 6px;
+    width: 6px;
+  }
 }
