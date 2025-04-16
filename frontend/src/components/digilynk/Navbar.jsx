@@ -45,7 +45,7 @@ export default function Navbar() {
       <div className="flex items-center gap-x-2 font-semibold">
         <img src={logo} className="md:size-12 size-8 transition-all duration-1000" alt="LOGO" />
         <span className={`inline transition-all duration-1000 md:text-3xl text-2xl font-bold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
-          DIGILYNK
+          Digilynk
         </span>
 
       </div>
@@ -69,7 +69,7 @@ export default function Navbar() {
 
             duration="3s"
             variant={darkMode ? "light" : "dark"}
-            className="text-sm font-semibold"
+            className="text-sm font-semibold font-custom-archia"
             onClick={handleContactClick}
           >
             CONTACT
@@ -106,7 +106,7 @@ export default function Navbar() {
           >
             <ul className="flex flex-col items-start pt-8 px-6 gap-4 font-semibold w-full">
               <li className="text-3xl text-zinc-800 font-bold flex justify-start cursor-pointer transition w-full text-left py-4">
-                DIGILYNK
+                Digilynk
               </li>
               {navLinks.map((link) => (
                 <li

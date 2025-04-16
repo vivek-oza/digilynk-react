@@ -17,7 +17,7 @@ export default function () {
       <section className="relative rounded-2xl text-zinc-800  bg-slate-100 shadow-2xl m-2 my-10 p-5 py-16">
         <div className="flex flex-col justify-around  ">
           <div className="flex w-full  items-center justify-center pb-16 text-2xl md:text-4xl font-bold">
-            Services By DIGILYNK
+            Services By Digilynk
           </div>
           <div className="z-10 grid grid-cols-1 lg:grid-cols-3 lg:col-span-2 gap-4 lg:gap-10 row-auto">
             <div className="w-full bg-transparent rounded-2xl">

@@ -19,7 +19,7 @@ export default function WhyChooseUs() {
                         Websites
                     </div>
                     <div className="z-20 text-md md:text-2xl drop-shadow-2xl text-white md:text-center leading-relaxed mx-4 md:mx-24 lg:mx-48">
-                    We design and develop websites, apps and digital experiences that help our clients grow, innovate, and transform. We listen, learn and understand before we build. We identify your goals together, then use our expertise to find that sweet spot of realistic and impactful.
+                        We design and develop websites, apps and digital experiences that help our clients grow, innovate, and transform. We listen, learn and understand before we build. We identify your goals together, then use our expertise to find that sweet spot of realistic and impactful.
                     </div>
                 </div>
             </section>

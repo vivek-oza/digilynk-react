@@ -27,7 +27,7 @@ export default function HeroSection() {
 
         <div className="flex-2">
           <h1 className="text-3xl md:text-5xl scroll font-bold font-pilowlava bg-clip-text text-transparent bg-gradient-to-b from-zinc-700 to-zinc-900 bg-opacity-50">
-            <TextGenerateEffect words="DIGILYNK" weight="bold" size="heading" className=" text-center md:text-start" />
+            <TextGenerateEffect words="Digilynk" weight="bold" size="heading" className=" text-center font-custom-archia md:text-start" />
           </h1>
           <p className="font-normal z-30 animate-fadeIn text-zinc-500 max-w-2xl mx-auto">
             <TextGenerateEffect words={quote} weight="medium" size="small" className="text-center md:text-start" />

@@ -144,6 +144,7 @@ export default {
         bree: ["Bree Serif", "serif"],
         zilla: ["Zilla Slab", "serif"],
         diodia: ["Diodia", "poppins"],
+        "custom-archia": ["custom-archia", "serif"],
       },
     },
   },

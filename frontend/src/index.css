@@ -12,6 +12,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'custom-archia';
+  src: url('assets/fonts/archia-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 :root {
   --radius: 0.625rem;
@@ -114,7 +122,7 @@
 }
 
 html {
-  font-family: poppins;
+  font-family: custom-archia;
 }
 
 .digilynkAccent {

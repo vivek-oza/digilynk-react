@@ -23,7 +23,7 @@ export default function Footer() {
                   className="w-16 h-16 md:w-20 md:h-20"
                   alt="Digilynk Logo"
                 />
-                <h1 className="text-2xl md:text-3xl font-bold">DIGILYNK</h1>
+                <h1 className="text-2xl md:text-3xl font-bold">Digilynk</h1>
               </div>
               <p className="text-sm md:text-base text-center md:text-left text-zinc-400 max-w-md">
                 Transforming ideas into digital reality. We provide innovative
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="mt-12 pt-6 border-t border-gray-700 text-center text-sm text-gray-400">
-            <p>© {new Date().getFullYear()} DIGILYNK. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Digilynk. All rights reserved.</p>
           </div>
         </div>
       </footer>

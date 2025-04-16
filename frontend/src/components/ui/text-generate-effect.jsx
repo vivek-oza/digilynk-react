@@ -58,13 +58,13 @@ export const TextGenerateEffect = ({
 
     return (
         <div className={cn(
-            "font-pilowlava text-center p-3 bg-clip-text text-zinc-800",
+            "text-center p-3 bg-clip-text text-zinc-800",
             sizeClasses[size],
             weightClasses[weight],
             className
         )}>
             <div className="mt-4">
-                <div className="leading-snug font-diodia tracking-wide">
+                <div className="leading-snug tracking-wide">
                     {renderWords()}
                 </div>
             </div>
