@@ -1,5 +1,5 @@
 import React from "react";
-import digiLynkLight from "../../../assets/icons/digilynk_light.png";
+import digiLynkLight from "../../../assets/icons/digilynk_light.svg";
 import digiLynkDark from "../../../assets/icons/digilynk_dark.png";
 import {
   Linkedin,
@@ -12,20 +12,20 @@ import {
 export default function Footer() {
   return (
     <>
-      <footer className="bg-slate-100 px-4 sm:px-6 py-12 text-black w-full rounded-t-3xl">
+      <footer className="bg-zinc-900 shadow-inner px-4 sm:px-6 py-12 text-zinc-300  w-full rounded-t-3xl">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 md:gap-12">
             {/* Brand Section */}
             <div className="flex flex-col items-center md:items-start space-y-4">
               <div className="flex flex-col items-center md:items-start space-y-3">
                 <img
-                  src={digiLynkDark}
+                  src={digiLynkLight}
                   className="w-16 h-16 md:w-20 md:h-20"
                   alt="Digilynk Logo"
                 />
-                <h1 className="text-2xl md:text-3xl font-bold">Digilynk</h1>
+                <h1 className="text-2xl md:text-3xl font-bold">DIGILYNK</h1>
               </div>
-              <p className="text-sm md:text-base text-center md:text-left text-gray-600 max-w-md">
+              <p className="text-sm md:text-base text-center md:text-left text-zinc-400 max-w-md">
                 Transforming ideas into digital reality. We provide innovative
                 solutions for your business needs.
               </p>
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="mt-12 pt-6 border-t border-gray-700 text-center text-sm text-gray-400">
-            <p>© {new Date().getFullYear()} Digilynk. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} DIGILYNK. All rights reserved.</p>
           </div>
         </div>
       </footer>

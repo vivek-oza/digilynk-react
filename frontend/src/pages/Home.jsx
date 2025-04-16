@@ -5,7 +5,9 @@ import "../index.css";
 import HeroSection from "@/components/digilynk/Sections/HeroSection";
 import ServicesSection from "@/components/digilynk/Sections/ServicesSection";
 import { FeaturesMarquee } from "@/components/digilynk/Sections/FeaturesMarquee";
-import Footer from "../components/digilynk/Sections/Footer";
+import Footer from "@/components/digilynk/Sections/Footer";
+import WhyChooseUs from "@/components/digilynk/Sections/WhyChooseUs";
+
 
 export default function Home() {
   return (
@@ -13,18 +15,18 @@ export default function Home() {
       {/* Hero section */}
       <HeroSection />
 
-      {/* Features scroll section */}
-      <FeaturesMarquee></FeaturesMarquee>
+      {/* About */}
+      <WhyChooseUs></WhyChooseUs>
 
       {/* Services section */}
       <ServicesSection />
 
-      {/* Contact form again */}
-      {/* About */}
-      
+      {/* Features scroll section */}
+      <FeaturesMarquee></FeaturesMarquee>
+
       {/* Footer */}
       <Footer></Footer>
-      
+
       {/* Whatsapp chat button */}
       {/* Back to top button */}
     </div>

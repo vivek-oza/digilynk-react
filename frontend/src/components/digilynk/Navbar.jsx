@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/icons/digilynk_dark.png";
-import logoLight from "../../assets/icons/digilynk_light.png";
+import logoLight from "../../assets/icons/digilynk_light.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import { PulsatingButtonCustom } from "../magicui/PulsatingButtonCustom";
@@ -44,8 +44,8 @@ export default function Navbar() {
       {/* Logo and Brand */}
       <div className="flex items-center gap-x-2 font-semibold">
         <img src={logo} className="md:size-12 size-8 transition-all duration-1000" alt="LOGO" />
-        <span className={`inline transition-all duration-1000 md:text-3xl font-bold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
-          Digilynk
+        <span className={`inline transition-all duration-1000 md:text-3xl text-2xl font-bold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
+          DIGILYNK
         </span>
 
       </div>
@@ -98,15 +98,15 @@ export default function Navbar() {
       <AnimatePresence className="">
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: -0 }}
-            exit={{ opacity: 1, x: 300 }}
+            initial={{ opacity: 0, x: 350 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 1, x: 350 }}
             transition={{ type: "tween", duration: 0.5, ease: "easeOut" }}
-            className={`lg:hidden absolute top-[calc(5rem)] right-0 w-64 h-[calc(100vh)] ${darkMode ? 'bg-slate-950' : 'bg-white'} text-white backdrop-blur-3xl flex justify-start mobile-menu-container`}
+            className={`lg:hidden absolute top-[calc(5rem)] right-0 w-72 h-[calc(100vh)] ${darkMode ? 'bg-slate-950' : 'bg-zinc-50'} text-white border-s-2 border-zinc-500 backdrop-blur-3xl flex justify-start mobile-menu-container`}
           >
             <ul className="flex flex-col items-start pt-8 px-6 gap-4 font-semibold w-full">
               <li className="text-3xl text-zinc-800 font-bold flex justify-start cursor-pointer transition w-full text-left py-4">
-                Digilynk
+                DIGILYNK
               </li>
               {navLinks.map((link) => (
                 <li

@@ -116,9 +116,9 @@ const FeatureCard = ({ title, desc, img }) => {
 
 export function FeaturesMarquee() {
   return (
-    <section className="my-20">
-      <div className="flex w-full items-center justify-center pb-10 text-2xl md:text-4xl font-bold">
-        What we offer at Digilynk
+    <section className="my-10">
+      <div className="flex w-full text-zinc-800 items-center justify-center pb-10 text-2xl md:text-4xl font-bold">
+        What we offer at DIGILYNK
       </div>
       <div className="relative">
         {/* Gradient overlays for the entire container */}

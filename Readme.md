@@ -1,4 +1,4 @@
-# Digilynk
+# DIGILYNK
 
 ## Installation and Setup
 

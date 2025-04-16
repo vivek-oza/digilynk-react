@@ -143,6 +143,7 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         bree: ["Bree Serif", "serif"],
         zilla: ["Zilla Slab", "serif"],
+        diodia: ["Diodia", "poppins"],
       },
     },
   },

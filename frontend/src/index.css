@@ -4,6 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'diodia';
+  src: url('assets/fonts/Diodia.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
