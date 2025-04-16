@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
                         {/* Remove Canvas wrapper */}
                         <ContainerTextFlip
                             words={["Faster", "Modern", "Better", "Smarter"]}
-                            className="mx-2"
+                            className="mx-2 md:text-4xl text-2xl"
                             interval={2000}
                             animationDuration={1000}
                         />
