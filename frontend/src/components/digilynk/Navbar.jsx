@@ -130,16 +130,24 @@ export default function Navbar() {
                   {link.name}
                 </li>
               ))}
-              {/* <li className="w-full text-left py-2">
+
+              <li
+                className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
+                onClick={handlePackageClick}
+              >
+                PACKAGES
+              </li>
+
+              <li className="text-left py-2">
                 <PulsatingButtonCustom
                   intensity="low"
-                  className="text-xl w-full"
-                  pulseColor={darkMode ? "#3b82f6" : "#0096ff"}
+                  // className="text-xl w-full"
+                  // pulseColor={darkMode ? "#3b82f6" : "#0096ff"}
                   onClick={handleContactClick}
                 >
                   CONTACT
                 </PulsatingButtonCustom>
-              </li> */}
+              </li>
             </ul>
           </motion.div>
         )}
