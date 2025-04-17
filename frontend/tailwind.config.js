@@ -155,6 +155,7 @@ export default {
       addVariant("group-hover", ":merge(.group):hover &");
     },
     addVariablesForColors, // Add this new plugin
+    require('tailwind-scrollbar-hide')
   ],
 };
 

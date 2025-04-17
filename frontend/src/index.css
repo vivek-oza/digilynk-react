@@ -115,14 +115,36 @@
   }
 }
 
+
+
+.noScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fafafa;
+  background: #27272a;
+}
+
+::selection {
+  color: #fafafa;
+  background: #27272a;
+}
+
+
 * {
   box-sizing: border-box;
   transition: all;
   transition-duration: 300;
 }
 
+
+
 html {
-  font-family: custom-archia;
+  /* font-family: custom-archia; */
+  font-family: poppins;
 }
 
 .digilynkAccent {

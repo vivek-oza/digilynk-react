@@ -3,6 +3,7 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import { ScrollProgress } from '../magicui/scroll-progress';
+import Footer from './Sections/Footer';
 
 const Layout = () => {
   return (
@@ -13,6 +14,8 @@ const Layout = () => {
         <main className="flex-1 pt-20 h-[calc(100vh-5rem)]">
           <Outlet className="" /> {/* This is where child routes will render */}
         </main>
+        {/* Footer */}
+        <Footer></Footer>
       </div>
     </>
   );

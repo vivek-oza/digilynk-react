@@ -117,7 +117,7 @@ const FeatureCard = ({ title, desc, img }) => {
 export function FeaturesMarquee() {
   return (
     <section className="my-10">
-      <div className="flex w-full text-zinc-800 items-center justify-center pb-10 text-2xl md:text-4xl font-bold">
+      <div className="flex w-full text-zinc-800 items-center justify-center pb-10 text-2xl md:text-5xl font-bold">
         What we offer at Digilynk
       </div>
       <div className="relative">

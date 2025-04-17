@@ -18,7 +18,7 @@ const FrostedCard = ({ imageSrc, imgHeight, title, bulletPoints = [] }) => {
   return (
     <Card className="relative flex justify-start rounded-2xl border bg-white text-card-foreground shadow-lg backdrop-blur-sm dark:backdrop-blur-md">
       <CardContent className="space-y-4">
-        <CardTitle className="text-2xl mt-0 text-zinc-800 font-bold text-center">
+        <CardTitle className="mt-0 text-zinc-800 text-2xl font-bold text-center">
           {title}
         </CardTitle>
         {bulletPoints.map((point, index) => (

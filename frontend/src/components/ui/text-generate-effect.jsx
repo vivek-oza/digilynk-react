@@ -45,8 +45,10 @@ export const TextGenerateEffect = ({
     // Size configurations
     const sizeClasses = {
         heading: "text-5xl md:text-7xl",  // Your original responsive sizing
+        "sub-heading": "text-2xl md:text-5xl",
         normal: "text-2xl md:text-[2.5rem]",
-        small: "text-xl md:text-2xl"
+        small: "text-xl md:text-2xl",
+        smallest: "text-lg md:text-xl"
     };
 
     // Weight configurations

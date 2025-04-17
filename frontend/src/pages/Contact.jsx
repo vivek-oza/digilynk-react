@@ -1,7 +1,7 @@
 import React from "react";
 import AppointmentForm from "../components/digilynk/AppointmentForm";
 
-export default function Contacts() {
+export default function Contact() {
   return (
     <>
       <div className="h-screen justify-center flex flex-col poppins">

@@ -24,8 +24,7 @@ export default function Home() {
       {/* Features scroll section */}
       <FeaturesMarquee></FeaturesMarquee>
 
-      {/* Footer */}
-      <Footer></Footer>
+
 
       {/* Whatsapp chat button */}
       {/* Back to top button */}

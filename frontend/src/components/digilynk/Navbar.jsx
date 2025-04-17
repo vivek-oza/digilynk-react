@@ -35,16 +35,16 @@ export default function Navbar() {
   ];
 
   const handleContactClick = () => {
-    navigate("/Contacts");
+    navigate("/contact");
     setIsOpen(false);
   };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 h-20 flex shadow-xl shadow-black/10 ${darkMode ? 'bg-slate-950 border-gray-700' : 'bg-zinc-50 border-gray-500'} border-b-2 items-center justify-between p-2 px-4 sm:px-12 backdrop-blur-3xl z-50 transition-all duration-1000`}>
       {/* Logo and Brand */}
-      <div className="flex items-center gap-x-2 font-semibold">
+      <div className="flex items-center gap-x-2">
         <img src={logo} className="md:size-12 size-8 transition-all duration-1000" alt="LOGO" />
-        <span className={`inline transition-all duration-1000 md:text-3xl text-2xl font-bold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
+        <span className={`inline transition-all duration-1000 md:text-3xl text-2xl font-semibold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
           Digilynk
         </span>
 
