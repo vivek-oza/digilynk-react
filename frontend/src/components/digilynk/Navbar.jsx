@@ -31,9 +31,13 @@ export default function Navbar() {
     { name: "HOME", href: "#home" },
     { name: "SERVICES", href: "#services" },
     { name: "ABOUT", href: "#about" },
-    { name: "PRICING", href: "#pricing" },
+    // { name: "PACKAGES", href: "" },
   ];
 
+  const handlePackageClick = () => {
+    navigate("/web-development");
+    setIsOpen(false);
+  };
   const handleContactClick = () => {
     navigate("/contact");
     setIsOpen(false);
@@ -62,6 +66,12 @@ export default function Navbar() {
               {link.name}
             </li>
           ))}
+          <li
+            className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
+            onClick={handlePackageClick}
+          >
+            PACKAGES
+          </li>
         </ul>
 
         <div className="flex items-center gap-4">
