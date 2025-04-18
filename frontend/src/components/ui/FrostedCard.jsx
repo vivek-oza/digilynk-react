@@ -4,7 +4,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, CircleCheck } from "lucide-react";
 import { RainbowButton } from "../magicui/rainbow-button";
 import { CardDescription, CardTitle } from "./card-hover-effect";
 import { RainbowButtonCustom } from "../magicui/rainbow-button-custom";
@@ -18,12 +18,12 @@ const FrostedCard = ({ imageSrc, imgHeight, title, bulletPoints = [] }) => {
   return (
     <Card className="relative flex justify-start rounded-2xl border bg-white text-card-foreground shadow-lg backdrop-blur-sm dark:backdrop-blur-md">
       <CardContent className="space-y-4">
-        <CardTitle className="mt-0 text-zinc-800 text-2xl font-bold text-center">
+        <CardTitle className="mt-0 text-zinc-800 text-xl font-bold text-center">
           {title}
         </CardTitle>
         {bulletPoints.map((point, index) => (
-          <div key={index} className="flex items-start space-x-2">
-            <CheckCircle className="text-green-500 dark:text-green-400 mt-0.5 flex-shrink-0" size={20} />
+          <div key={index} className="flex items-start justify-start mx-auto space-x-2">
+            <CircleCheck className="text-green-500 dark:text-green-400 mt-0.5 flex-shrink-0" size={20} />
             <span className="text-sm sm:text-base">{point}</span>
           </div>
         ))}

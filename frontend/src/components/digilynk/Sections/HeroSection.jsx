@@ -16,15 +16,23 @@ import SpinningLogo from "./Graphics/SpinningLogo";
 import { Globe } from "../../ui/globe";
 import FourKnotLoop from "./Graphics/FourKnotLoop";
 import SphereGrid from "./Graphics/SphereGrid";
+import { ArrowBigDown, MoveRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 
 export default function HeroSection() {
+  const navigate = useNavigate();
+  function handleWhatsappClick() {
+    const phoneNumber = '7990903975'; // replace with actual number
+    const message = encodeURIComponent("Hi, I'm contacting you from Digilynk website regarding your services.");
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`);
+  }
   // const quote = "A subtle yet effective spotlight effect, because your business needs limelight.";
   const quote = "Transforming ideas into digital reality. We provide innovative solutions for your business needs.";
 
   return (
     <>
-      <section className="flex flex-wrap-reverse md:flex-nowrap px-4 justify-center md:items-center  rounded-b-3xl shadow-2xl min-h-[calc(100vh-5rem)] bg-white light:bg-slate-50 relative overflow-hidden">
+      <section className="flex flex-wrap-reverse md:flex-nowrap px-4 py-5 justify-center md:items-center  rounded-b-3xl shadow-2xl h-[calc(80vh)] bg-white light:bg-slate-50 relative overflow-hidden">
 
         <div>
           <h1>
@@ -33,22 +41,10 @@ export default function HeroSection() {
           <p className="z-30 animate-fadeIn  max-w-2xl mx-auto">
             <TextGenerateEffect words={quote} weight="medium" size="small" className="text-center  md:text-start" />
           </p>
-
+          <div className="ms-3 animate-fadeIn cursor-pointer md:text-2xl text-xl text-zinc-800  flex items-center justify-center md:justify-start space-x-2 h-12 group" onClick={handleWhatsappClick}> <span> Whatsapp now </span> <MoveRight id="arrowRight" className="size-7 group-hover:translate-x-2 transition-all" /> </div>
         </div>
 
         <SphereGrid className="" />
-
-        {/* <FourKnotLoop></FourKnotLoop> */}
-
-        {/* <SpinningLogo /> */}
-
-        {/* <Globe /> */}
-
-        {/* <div className="w-[100%] flex md:justify-end justify-center items-center flex-1">
-          <FerroFluidScene />
-        </div> */}
-
-        {/* <Spotlight theme="light" /> */}
       </section>
     </>
   );

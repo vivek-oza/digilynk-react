@@ -145,6 +145,7 @@
 html {
   /* font-family: custom-archia; */
   font-family: poppins;
+  scroll-behavior: smooth;
 }
 
 .digilynkAccent {

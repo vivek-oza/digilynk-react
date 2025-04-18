@@ -11,7 +11,7 @@ import WhyChooseUs from "@/components/digilynk/Sections/WhyChooseUs";
 
 export default function Home() {
   return (
-    <div className="h-full flex flex-col poppins">
+    <div className="flex flex-col poppins">
       {/* Hero section */}
       <HeroSection />
 

@@ -20,7 +20,7 @@ export default function WebDevelopment() {
 
     return (
         <div className=''>
-            <section className="mb-20 flex flex-col justify-center items-start min-h-[calc(100vh-5rem)] bg-slate-100 m-5 rounded-2xl text-zinc-800 p-5">
+            <section className="mb-20 flex flex-col justify-center items-start min-h-[calc(100vh-10rem)] bg-blue-100 m-5 rounded-2xl text-zinc-800 p-5">
                 <div className='flex flex-row flex-wrap-reverse md:flex-nowrap'>
                     <div className='flex flex-col'>
                         <TextGenerateEffect size='sub-heading' words={"Website development"} className={"text-zinc-800 text-start animate-fadeIn"} />
@@ -39,7 +39,7 @@ export default function WebDevelopment() {
                     </div>
                 </div>
             </section>
-            <section className="mb-10 flex flex-col justify-center items-start min-h-[calc(100vh-5rem)] bg-slate-100 m-5 rounded-2xl text-zinc-800 p-5">
+            <section className="mb-10 flex flex-col justify-center items-start min-h-[calc(100vh-10rem)] bg-lime-200 m-5 rounded-2xl text-zinc-800 p-5">
                 <div className='flex flex-row md:flex-nowrap flex-wrap'>
                     <div className="bg-zinc-800 md:mx-0 mx-3 md:min-w-[540px] xl:max-w-[900px] my-5 size-full p-2 rounded-3xl"> {/* Add container for proper sizing */}
                         <img src={digilynkTeam} alt="" className='rounded-2xl scale-x-[-1]' />
@@ -53,7 +53,7 @@ export default function WebDevelopment() {
             </section>
 
             <section id='packages' className='p-10 mb-10'>
-                <div className="flex w-full text-zinc-800 flex-col space-y-5 text-center  items-center justify-center text-2xl md:py-10 py-5 md:text-5xl font-bold">
+                <div className="flex w-full text-zinc-800 flex-col space-y-5 text-center  items-center justify-center text-2xl md:py-10 py-5 md:text-4xl font-bold">
                     <span>Website development packages By Digilynk</span>
                     <span className='md:text-2xl text-lg font-light text-slate-500'>
                         We’re the only web development agency you'll ever need !
@@ -83,7 +83,7 @@ export const projects = [
             "Setup of your text, images, and basic page content",
             "7 Days Free Support",
         ],
-        link: "https://example.com",
+        link: "https://api.whatsapp.com/send/?phone=7990903975&text=Hi%2C+I%27m+contacting+you+from+Digilynk+website+regarding+Essential+web+development+package.&type=phone_number&app_absent=0",
     },
     {
         title: "Professional",
@@ -98,7 +98,7 @@ export const projects = [
             "MongoDB database integration",
             "14 Days Free Support",
         ],
-        link: "https://example.com",
+        link: "https://api.whatsapp.com/send/?phone=7990903975&text=Hi%2C+I%27m+contacting+you+from+Digilynk+website+regarding+Professional+web+development+package.&type=phone_number&app_absent=0",
         badge: "Best Value"
     },
     {
@@ -115,7 +115,7 @@ export const projects = [
             "Full source code delivery after payment",
             "30 Days Free Support",
         ],
-        link: "https://example.com",
+        link: "https://api.whatsapp.com/send/?phone=7990903975&text=Hi%2C+I%27m+contacting+you+from+Digilynk+website+regarding+Elite+web+development+package.&type=phone_number&app_absent=0",
     },
 ];
 

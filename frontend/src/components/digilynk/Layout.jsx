@@ -8,7 +8,7 @@ import Footer from './Sections/Footer';
 const Layout = () => {
   return (
     <>
-      <div className="flex flex-col bg-white min-h-screen">
+      <div className="flex flex-col bg-white">
         <Navbar />
         <ScrollProgress className="h-1 top-[calc(5rem)]" />
         <main className="flex-1 pt-20 h-[calc(100vh-5rem)]">

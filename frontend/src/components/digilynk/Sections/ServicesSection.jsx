@@ -9,19 +9,20 @@ import { FlickeringGrid } from "../../magicui/flickering-grid";
 export default function () {
   return (
     <>
-      <section className="relative rounded-2xl text-zinc-800  bg-slate-100 shadow-2xl m-2 my-10 p-5 py-16">
-        <div className="flex flex-col justify-around  ">
-          <div className="flex w-full  items-center justify-center pb-16 text-2xl md:text-5xl font-bold">
+      <section className="relative rounded-2xl text-zinc-800  bg-pink-200 shadow-2xl md:mx-16 mx-4 p-5 py-16">
+        <div className="flex flex-col justify-center items-center">
+          <div className="flex w-full  items-center justify-center pb-16 text-2xl md:text-4xl font-bold">
             Services By Digilynk
           </div>
-          <div className="z-10 grid grid-cols-1 lg:grid-cols-3 lg:col-span-2 gap-4 lg:gap-10 row-auto">
-            <div className="w-full bg-transparent rounded-2xl">
+          <div className="z-10 grid grid-cols-1 md:grid-cols-2  mx-auto gap-4 lg:gap-10 row-auto">
+            <div className="w-full md:col-span-1 bg-transparent rounded-2xl">
               <FrostedCard
                 // imageSrc={serviceWebDev}
                 imgHeight="300px"
                 title="Web development"
                 bulletPoints={[
-                  "Budget-friendly premium quality",
+                  "Budget-friendly",
+                  "Premium quality",
                   "100% custom websites",
                   "Mobile-ready designs",
                   "High-converting UI/UX",
@@ -30,7 +31,7 @@ export default function () {
                 ]}
               />
             </div>
-            <div className="w-full  rounded-2xl bg-transparent">
+            <div className="w-full md:col-span-1 rounded-2xl bg-transparent">
               <FrostedCard
                 // imageSrc={serviceQA}
                 imgHeight="300px"
@@ -42,10 +43,11 @@ export default function () {
                   "Real-time bug tracking",
                   "End-to-end testing",
                   "Launch with confidence",
+                  "Bundle with Web development"
                 ]}
               />
             </div>
-            <div className="w-full  rounded-2xl   ">
+            {/* <div className="w-full  rounded-2xl   ">
               <FrostedCard
                 // imageSrc={serviceDigital}
                 imgHeight="300px"
@@ -59,7 +61,7 @@ export default function () {
                   "Transparent pricing",
                 ]}
               />
-            </div>
+            </div> */}
           </div>
 
         </div>
