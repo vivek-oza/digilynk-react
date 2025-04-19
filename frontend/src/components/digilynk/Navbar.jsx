@@ -28,8 +28,8 @@ export default function Navbar() {
   }, [isOpen]);
 
   const navLinks = [
-    { name: "HOME", href: "#home" },
-    { name: "SERVICES", href: "#services" },
+    // { name: "HOME", href: "#home" },
+    // { name: "SERVICES", href: "#services" },
     // { name: "ABOUT", href: "#about" },
     // { name: "PACKAGES", href: "" },
   ];
@@ -52,15 +52,12 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 h-20 flex shadow-xl shadow-black/10 ${darkMode ? 'bg-slate-950 border-gray-700' : 'bg-zinc-50 border-gray-500'} border-b-2 items-center justify-between p-2 px-4 sm:px-12 backdrop-blur-3xl z-50 transition-all duration-1000`}>
       {/* Logo and Brand */}
       <a href="https://digilynk-react.vercel.app" className="list-none cursor-pointer">
-
-
         <div className="flex items-center gap-x-2">
           <img src={logo} className="md:size-12 size-8 transition-all duration-1000" alt="LOGO" />
           <span className={`inline transition-all duration-1000 md:text-3xl text-2xl font-semibold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
             Digilynk
           </span>
         </div>
-
       </a>
 
       {/* Desktop Navigation */}
@@ -75,11 +72,27 @@ export default function Navbar() {
               {link.name}
             </li>
           ))}
+          <a href="https://digilynk-react.vercel.app">
+            <li
+              className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
+              onClick={handleAboutClick}
+            >
+              HOME
+            </li>
+          </a>
+          <a href="https://digilynk-react.vercel.app/#services">
+            <li
+              className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
+              onClick={handleAboutClick}
+            >
+              SERVICES
+            </li>
+          </a>
           <li
             className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
             onClick={handleAboutClick}
           >
-            ABOIT
+            ABOUT
           </li>
           <li
             className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
