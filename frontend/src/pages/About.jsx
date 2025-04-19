@@ -25,21 +25,28 @@ export default function About() {
         <div className=''>
             <section className="mb-20 flex flex-col justify-center items-start min-h-[calc(100vh-10rem)] bg-blue-100 m-5 rounded-2xl text-zinc-800 p-5">
                 <div className='flex flex-row flex-wrap-reverse md:flex-nowrap'>
-                    <div className='flex flex-col'>
-                        <TextGenerateEffect size='sub-heading' words={"About Us"} className={"text-zinc-800 text-start animate-fadeIn"} />
+                    <div className='flex flex-col p-5'>
+                        {/* <TextGenerateEffect size='sub-heading' words={"About Us"} className={"text-zinc-800 text-start animate-fadeIn"} />
                         <TextGenerateEffect size='small' weight='normal' words={subHeadingQuote} className={"text-zinc-800 text-start"} />
-                        <TextGenerateEffect size='small' weight='normal' words={subHeadingQuote2} className={"text-zinc-800 text-start"} />
-                        <div className='ms-3 animate-fadeIn'>
-                            <a href="#packages" className=' group w-fit flex flex-row space-x-2 text-slate-600 md:text-2xl text-xl '>
-                                <span>View services directly</span>
+                        <TextGenerateEffect size='small' weight='normal' words={subHeadingQuote2} className={"text-zinc-800 text-start"} /> */}
+                        <h1 className={"text-zinc-800 text-start text-2xl md:text-3xl mb-12"}>About us</h1>
+                        <p className={"text-zinc-800 text-start text-xl md:text-xl font-light mb-6"}>
+                            {subHeadingQuote}
+                        </p>
+                        <p className={"text-zinc-800 text-start text-xl md:text-xl font-light mb-6"}>
+                            {subHeadingQuote2}
+                        </p>
+                        <div className='animate-fadeIn'>
+                            <a href="#packages" className=' group w-fit flex flex-row space-x-2 text-slate-700 hover:text-slate-500 '>
+                                <span>View FAQs directly</span>
                                 <div className='border-2 size-8 p-1 rounded-full'>
                                     <MoveRight id='MoveArrow' className='size-5 group-hover:rotate-45 transition-all' />
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div className="sticky md:mx-0 mx-3 md:min-w-[400px] md:min-h-[400px] xl:max-w-[700px] my-5 size-full p-2">
-                        <img src={aboutRobot} alt="" className='md:min-w-[380px] md:min-h-[380px] rounded-full scale-x-[1]' />
+                    <div className="sticky md:mx-0 mx-3 md:max-w-[400px] md:max-h-[400px] xl:max-w-[700px] my-5 size-full p-2">
+                        <img src={aboutRobot} alt="" className='md:max-w-[380px] md:max-h-[380px] rounded-full scale-x-[1]' />
                     </div>
                 </div>
             </section>

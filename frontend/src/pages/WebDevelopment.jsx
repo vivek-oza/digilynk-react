@@ -22,9 +22,9 @@ export default function WebDevelopment() {
         <div className=''>
             <section className="mb-20 flex flex-col justify-center items-start min-h-[calc(100vh-10rem)] bg-blue-100 m-5 rounded-2xl text-zinc-800 p-5">
                 <div className='flex flex-row flex-wrap-reverse md:flex-nowrap'>
-                    <div className='flex flex-col'>
-                        <TextGenerateEffect size='sub-heading' words={"Website development"} className={"text-zinc-800 text-start animate-fadeIn"} />
-                        <TextGenerateEffect size='small' weight='normal' words={subHeadingQuote} className={"text-zinc-800 text-start"} />
+                    <div className='flex flex-col my-10'>
+                        <h1 className={"ms-3 text-xl md:text-4xl tracking-wide text-zinc-800 text-start animate-fadeIn"}>Website development</h1>
+                        <TextGenerateEffect size='small' weight='normal' words={subHeadingQuote} className={"text-zinc-700 text-start"} />
                         <div className='ms-3 animate-fadeIn'>
                             <a href="#packages" className=' group w-fit flex flex-row space-x-2 text-slate-600 md:text-2xl text-xl '>
                                 <span>View services directly</span>
@@ -44,10 +44,12 @@ export default function WebDevelopment() {
                     <div className="bg-zinc-800 md:mx-0 mx-3 md:min-w-[540px] xl:max-w-[900px] my-5 size-full p-2 rounded-3xl"> {/* Add container for proper sizing */}
                         <img src={digilynkTeam} alt="" className='rounded-2xl scale-x-[-1]' />
                     </div>
-                    <div className='flex flex-col px-5'>
+                    <div className='flex flex-col px-5 my-10'>
                         {/* <TextGenerateEffect size='sub-heading' words={"Website development"} className={"text-zinc-800 text-start animate-fadeIn"} /> */}
-                        <TextGenerateEffect size='smallest' weight='normal' words={digilynkQuote} className={"text-zinc-800 text-start animate-fadeIn"} />
-                        <TextGenerateEffect size='smallest' weight='normal' words={digilynkQuote2} className={"text-zinc-800 text-start delay-1000"} />
+                        {/* <TextGenerateEffect size='smallest' weight='normal' words={digilynkQuote} className={"text-zinc-800 text-start animate-fadeIn"} />
+                        <TextGenerateEffect size='smallest' weight='normal' words={digilynkQuote2} className={"text-zinc-800 text-start delay-1000"} /> */}
+                        <div className='text-2xl font-normal text-zinc-800'>{digilynkQuote}</div>
+                        <div className='text-2xl font-normal text-zinc-800'>{digilynkQuote2}</div>
                     </div>
                 </div>
             </section>

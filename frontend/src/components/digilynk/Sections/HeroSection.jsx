@@ -18,7 +18,8 @@ import FourKnotLoop from "./Graphics/FourKnotLoop";
 import SphereGrid from "./Graphics/SphereGrid";
 import { ArrowBigDown, MoveRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
+import AnimatedModel from "./Graphics/AnimatedModel";
+import robotModel from '../../../assets/3dModels/cute_robot.glb';
 
 export default function HeroSection() {
   const navigate = useNavigate();
@@ -32,19 +33,19 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="flex flex-wrap-reverse md:flex-nowrap px-4 py-5 justify-center md:items-center  rounded-b-3xl shadow-2xl h-[calc(80vh)] bg-white light:bg-slate-50 relative overflow-hidden">
+      <section className="flex flex-wrap-reverse md:flex-nowrap px-4 py-5 justify-center md:items-center  rounded-b-3xl shadow-2xl h-[calc(100vh-5rem)] bg-white light:bg-slate-50 relative overflow-hidden">
 
         <div>
           <h1>
-            <TextGenerateEffect words="Digilynk" weight="bold" size="heading" className=" text-center  md:text-start" />
+            <span className=" text-center ms-3 animate-fadeIn font-semibold text-4xl text-zinc-800 md:text-start">Welcome to Digilynk</span>
           </h1>
           <p className="z-30 animate-fadeIn  max-w-2xl mx-auto">
             <TextGenerateEffect words={quote} weight="medium" size="small" className="text-center  md:text-start" />
           </p>
-          <div className="ms-3 animate-fadeIn cursor-pointer md:text-2xl text-xl text-zinc-800  flex items-center justify-center md:justify-start space-x-2 h-12 group" onClick={handleWhatsappClick}> <span> Whatsapp now </span> <MoveRight id="arrowRight" className="size-7 group-hover:translate-x-2 transition-all" /> </div>
+          <div className="ms-3 animate-fadeIn cursor-pointer md:text-2xl text-xl text-zinc-800  flex items-center justify-center md:justify-start space-x-2 h-12 group md:w-fit" onClick={handleWhatsappClick}> <span> Message now </span> <MoveRight id="arrowRight" className="size-7 group-hover:translate-x-2 transition-all" /> </div>
         </div>
-
-        <SphereGrid className="" />
+        <AnimatedModel modelUrl={robotModel} className="animate-fadeIn"/>
+        {/* <SphereGrid className="" /> */}
       </section>
     </>
   );
