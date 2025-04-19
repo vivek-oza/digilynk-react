@@ -36,8 +36,8 @@ export default function HeroSection() {
       <section className="flex flex-wrap-reverse md:flex-nowrap px-4 py-5 justify-center md:items-center  rounded-b-3xl shadow-2xl h-[calc(100vh-5rem)] bg-white light:bg-slate-50 relative overflow-hidden">
 
         <div>
-          <h1>
-            <span className=" text-center ms-3 animate-fadeIn font-semibold text-4xl text-zinc-800 md:text-start">Welcome to Digilynk</span>
+          <h1 className="w-full flex flex-row">
+            <span className="text-center mx-auto md:ms-3 animate-fadeIn font-semibold text-4xl text-zinc-800 md:text-center">Welcome to Digilynk</span>
           </h1>
           <p className="z-30 animate-fadeIn  max-w-2xl mx-auto">
             <TextGenerateEffect words={quote} weight="medium" size="small" className="text-center  md:text-start" />
