@@ -20,7 +20,9 @@ export default function Home() {
       <WhyChooseUs></WhyChooseUs>
 
       {/* Services section */}
-      <ServicesSection />
+      <div id="services">
+        <ServicesSection />
+      </div>
 
       {/* Features scroll section */}
       <FeaturesMarquee></FeaturesMarquee>
