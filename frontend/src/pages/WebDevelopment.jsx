@@ -85,7 +85,7 @@ export const projects = [
             "Setup of your text, images, and basic page content",
             "7 Days Free Support",
         ],
-        link: "https://api.whatsapp.com/send/?phone=7990903975&text=Hi%2C+I%27m+contacting+you+from+Digilynk+website+regarding+Essential+web+development+package.&type=phone_number&app_absent=0",
+        link: "https://api.whatsapp.com/send/?phone=6353959930&text=Hi%2C+I%27m+contacting+you+from+Digilynk+website+regarding+Essential+web+development+package.&type=phone_number&app_absent=0",
     },
     {
         title: "Professional",
@@ -100,7 +100,7 @@ export const projects = [
             "MongoDB database integration",
             "14 Days Free Support",
         ],
-        link: "https://api.whatsapp.com/send/?phone=7990903975&text=Hi%2C+I%27m+contacting+you+from+Digilynk+website+regarding+Professional+web+development+package.&type=phone_number&app_absent=0",
+        link: "https://api.whatsapp.com/send/?phone=6353959930&text=Hi%2C+I%27m+contacting+you+from+Digilynk+website+regarding+Professional+web+development+package.&type=phone_number&app_absent=0",
         badge: "Best Value"
     },
     {
@@ -117,7 +117,7 @@ export const projects = [
             "Full source code delivery after payment",
             "30 Days Free Support",
         ],
-        link: "https://api.whatsapp.com/send/?phone=7990903975&text=Hi%2C+I%27m+contacting+you+from+Digilynk+website+regarding+Elite+web+development+package.&type=phone_number&app_absent=0",
+        link: "https://api.whatsapp.com/send/?phone=6353959930&text=Hi%2C+I%27m+contacting+you+from+Digilynk+website+regarding+Elite+web+development+package.&type=phone_number&app_absent=0",
     },
 ];
 

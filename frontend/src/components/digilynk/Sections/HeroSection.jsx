@@ -25,7 +25,7 @@ import { cn } from "../../../lib/utils";
 export default function HeroSection() {
   const navigate = useNavigate();
   function handleWhatsappClick() {
-    const phoneNumber = '7990903975'; // replace with actual number
+    const phoneNumber = '6353959930'; // replace with actual number
     const message = encodeURIComponent("Hi, I'm contacting you from Digilynk website regarding your services.");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`);
   }
