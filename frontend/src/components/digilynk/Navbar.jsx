@@ -35,7 +35,7 @@ export default function Navbar() {
   ];
 
   const handlePackageClick = () => {
-    navigate("/web-development");
+    navigate("/web-development"); 
     setIsOpen(false);
   };
   const handleContactClick = () => {
@@ -46,15 +46,23 @@ export default function Navbar() {
     navigate("/about");
     setIsOpen(false);
   };
+  const handleHomeClick = () => {
+    navigate("/#top");
+    setIsOpen(false);
+  };
+  const handleServicesClick = () => {
+    navigate("/#servies");
+    setIsOpen(false);
+  };
 
 
   return (
     <nav className={`fixed top-0 left-0 right-0 h-20 flex shadow-xl shadow-black/10 ${darkMode ? 'bg-slate-950 border-gray-700' : 'bg-zinc-50 border-gray-500'} border-b-2 items-center justify-between p-2 px-4 sm:px-12 backdrop-blur-3xl z-50 transition-all duration-1000`}>
       {/* Logo and Brand */}
-      <a href="https://digilynk-react.vercel.app" className="list-none cursor-pointer">
+      <a href="/" className="list-none cursor-pointer">
         <div className="flex items-center gap-x-2">
-          <img src={logo} className="md:size-12 size-8 transition-all duration-1000" alt="LOGO" />
-          <span className={`inline transition-all duration-1000 md:text-3xl text-2xl font-semibold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
+          <img src={logo} className="md:size-10 size-8 transition-all duration-1000" alt="LOGO" />
+          <span className={`inline transition-all duration-1000 md:text-2xl text-2xl font-semibold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
             Digilynk
           </span>
         </div>
@@ -72,18 +80,16 @@ export default function Navbar() {
               {link.name}
             </li>
           ))}
-          <a href="https://digilynk-react.vercel.app">
+          <li
+            className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
+            onClick={handleHomeClick}
+          >
+            HOME
+          </li>
+          <a href="#services">
             <li
               className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
-              onClick={handleAboutClick}
-            >
-              HOME
-            </li>
-          </a>
-          <a href="https://digilynk-react.vercel.app/#services">
-            <li
-              className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
-              onClick={handleAboutClick}
+              onClick={handleServicesClick}
             >
               SERVICES
             </li>
@@ -143,9 +149,9 @@ export default function Navbar() {
             className={`lg:hidden absolute top-[calc(5rem)] right-0 w-72 h-[calc(100vh)] ${darkMode ? 'bg-slate-950' : 'bg-zinc-50'} text-white border-s-2 border-zinc-500 backdrop-blur-3xl flex justify-start mobile-menu-container`}
           >
             <ul className="flex flex-col items-start pt-8 px-6 gap-4 font-semibold w-full">
-              <li className="text-3xl text-zinc-800 font-bold flex justify-start cursor-pointer transition w-full text-left py-4">
+              {/* <li className="text-3xl text-zinc-800 font-bold flex justify-start cursor-pointer transition w-full text-left py-4">
                 Digilynk
-              </li>
+              </li> */}
               {navLinks.map((link) => (
                 <li
                   key={link.name}
@@ -161,10 +167,33 @@ export default function Navbar() {
 
               <li
                 className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
+                onClick={handleHomeClick}
+              >
+                HOME
+              </li>
+              <a href="#services">
+                <li
+                  className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
+                  onClick={handleServicesClick}
+                >
+                  SERVICES
+                </li>
+              </a>
+              <li
+                className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
+                onClick={handleAboutClick}
+              >
+                ABOUT
+              </li>
+              <li
+                className={`${darkMode ? 'hover:bg-gray-700 text-white' : 'hover:bg-zinc-800 text-zinc-800 hover:text-white'} px-3 py-2 rounded-md hover:border-b-blue-500 cursor-pointer transition`}
                 onClick={handlePackageClick}
               >
                 PACKAGES
               </li>
+
+
+
 
               <li className="text-left py-2">
                 <PulsatingButtonCustom
@@ -180,6 +209,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </nav >
   );
 }

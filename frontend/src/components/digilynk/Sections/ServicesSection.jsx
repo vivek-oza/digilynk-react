@@ -9,7 +9,72 @@ import { FlickeringGrid } from "../../magicui/flickering-grid";
 export default function () {
   return (
     <>
-      <section className="relative rounded-2xl text-zinc-800  bg-pink-200 shadow-2xl md:mx-16 mx-4 p-5 py-16">
+      <section className="relative  text-zinc-800  p-5 my-10">
+        <div className="flex flex-col justify-center  items-center">
+          <div className="flex w-full  items-center justify-center pb-16 text-2xl md:text-3xl font-semibold">
+            Services
+          </div>
+          <div className="z-10 w-full  grid grid-cols-3 gap-4 lg:gap-10 row-auto">
+            <FrostedCard
+              // imgHeight="300px"
+              className="w-[500px]"
+              title="Web development"
+              bulletPoints={[
+                "Budget-friendly",
+                "Premium quality",
+                "100% custom websites",
+                "Mobile-ready designs",
+                "High-converting UI/UX",
+                "SEO-built from scratch",
+                "Fast & secure code",
+              ]}
+              cardLink="/web-development"
+            />
+            <FrostedCard
+              // imageSrc={serviceQA}
+              imgHeight="300px"
+              title="Software Testing"
+              bulletPoints={[
+                "Zero-bug releases",
+                "Manual + automated QA",
+                "Security hardened",
+                "Real-time bug tracking",
+                "End-to-end testing",
+                "Launch with confidence",
+                "Bundle with Web development"
+              ]}
+            />
+            {/* <FrostedCard
+              // imageSrc={serviceDigital}
+              // imgHeight="300px"
+              title="Digital Marketing"
+              bulletPoints={[
+                "Guaranteed ROI campaigns",
+                "Top-ranking SEO",
+                "Social media growth",
+                "Click-worthy ad designs",
+                "Data-driven strategies",
+                "Transparent pricing",
+              ]}
+            /> */}
+            <FrostedCard
+              // imageSrc={serviceDigital}
+              imgHeight="300px"
+              title="Creative Design"
+              bulletPoints={[
+                "Guaranteed ROI campaigns",
+                "Top-ranking SEO",
+                "Social media growth",
+                "Click-worthy ad designs",
+                "Data-driven strategies",
+                "Transparent pricing",
+              ]}
+            />
+          </div>
+
+        </div>
+      </section >
+      {/* <section className="relative rounded-2xl text-zinc-800  bg-pink-200 shadow-2xl md:mx-16 mx-4 p-5 py-16">
         <div className="flex flex-col justify-center items-center">
           <div className="flex w-full  items-center justify-center pb-16 text-2xl md:text-4xl font-bold">
             Services By Digilynk
@@ -47,25 +112,11 @@ export default function () {
                 ]}
               />
             </div>
-            {/* <div className="w-full  rounded-2xl   ">
-              <FrostedCard
-                // imageSrc={serviceDigital}
-                imgHeight="300px"
-                title="Digital Marketing"
-                bulletPoints={[
-                  "Guaranteed ROI campaigns",
-                  "Top-ranking SEO",
-                  "Social media growth",
-                  "Click-worthy ad designs",
-                  "Data-driven strategies",
-                  "Transparent pricing",
-                ]}
-              />
-            </div> */}
+
           </div>
 
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

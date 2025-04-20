@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <>
+
       <DigilynkRoutes />
       <Toaster
         position="top-center"
@@ -17,6 +18,7 @@ function App() {
           },
         }}
       />
+
     </>
   );
 }

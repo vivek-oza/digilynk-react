@@ -37,8 +37,8 @@ export default function About() {
                             {subHeadingQuote2}
                         </p>
                         <div className='animate-fadeIn'>
-                            <a href="#packages" className=' group w-fit flex flex-row space-x-2 text-slate-700 hover:text-slate-500 '>
-                                <span>View FAQs directly</span>
+                            <a href="#packages" className='group w-fit flex flex-row space-x-2 text-slate-700 hover:text-slate-500 '>
+                                <span className='text-xl'>View FAQs directly</span>
                                 <div className='border-2 size-8 p-1 rounded-full'>
                                     <MoveRight id='MoveArrow' className='size-5 group-hover:rotate-45 transition-all' />
                                 </div>
@@ -95,7 +95,7 @@ export default function About() {
             </section>
 
             <section id='packages' className='p-10 mb-10'>
-                <div className="flex w-full text-zinc-800 flex-col space-y-5 text-center  items-center justify-center text-2xl md:py-10 py-5 md:text-4xl font-bold">
+                <div className="flex w-full text-zinc-800 flex-col space-y-5 text-center  items-center justify-center text-2xl md:py-10 py-5 md:text-3xl font-semibold">
                     <span>FAQs</span>
                     <span className='md:text-2xl text-lg font-light text-slate-500'>
                         Common questions you might have.

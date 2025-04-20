@@ -20,7 +20,7 @@ export default function WebDevelopment() {
 
     return (
         <div className=''>
-            <section className="mb-20 flex flex-col justify-center items-start min-h-[calc(100vh-10rem)] bg-blue-100 m-5 rounded-2xl text-zinc-800 p-5">
+            <section className="mb-20 flex flex-col justify-center items-start min-h-[calc(100vh-10rem)] m-5 rounded-2xl text-zinc-800 p-5">
                 <div className='flex flex-row flex-wrap-reverse md:flex-nowrap'>
                     <div className='flex flex-col my-10'>
                         <h1 className={"ms-3 text-xl md:text-4xl tracking-wide text-zinc-800 text-start animate-fadeIn"}>Website development</h1>
@@ -39,7 +39,7 @@ export default function WebDevelopment() {
                     </div>
                 </div>
             </section>
-            <section className="mb-10 flex flex-col justify-center items-start min-h-[calc(100vh-10rem)] bg-lime-200 m-5 rounded-2xl text-zinc-800 p-5">
+            <section className="mb-10 flex flex-col justify-center items-start min-h-[calc(100vh-10rem)] m-5 rounded-2xl text-zinc-800 p-5">
                 <div className='flex flex-row md:flex-nowrap flex-wrap'>
                     <div className="bg-zinc-800 md:mx-0 mx-3 md:min-w-[540px] xl:max-w-[900px] my-5 size-full p-2 rounded-3xl"> {/* Add container for proper sizing */}
                         <img src={digilynkTeam} alt="" className='rounded-2xl scale-x-[-1]' />
@@ -48,16 +48,16 @@ export default function WebDevelopment() {
                         {/* <TextGenerateEffect size='sub-heading' words={"Website development"} className={"text-zinc-800 text-start animate-fadeIn"} /> */}
                         {/* <TextGenerateEffect size='smallest' weight='normal' words={digilynkQuote} className={"text-zinc-800 text-start animate-fadeIn"} />
                         <TextGenerateEffect size='smallest' weight='normal' words={digilynkQuote2} className={"text-zinc-800 text-start delay-1000"} /> */}
-                        <div className='text-2xl font-normal text-zinc-800'>{digilynkQuote}</div>
-                        <div className='text-2xl font-normal text-zinc-800'>{digilynkQuote2}</div>
+                        <div className='text-[1.35rem] font-normal text-zinc-800'>{digilynkQuote}</div>
+                        <div className='text-[1.35rem] mt-7 font-normal text-zinc-800'>{digilynkQuote2}</div>
                     </div>
                 </div>
             </section>
 
             <section id='packages' className='p-10 mb-10'>
-                <div className="flex w-full text-zinc-800 flex-col space-y-5 text-center  items-center justify-center text-2xl md:py-10 py-5 md:text-4xl font-bold">
+                <div className="flex w-full text-zinc-800 flex-col space-y-5 text-center  items-center justify-center text-2xl md:py-10 py-5 md:text-3xl font-semibold">
                     <span>Website development packages By Digilynk</span>
-                    <span className='md:text-2xl text-lg font-light text-slate-500'>
+                    <span className='md:text-xl text-lg font-light text-slate-500'>
                         We’re the only web development agency you'll ever need !
                     </span>
                 </div>

@@ -18,7 +18,7 @@ const CONFIG = {
 // Main component (options UI commented out)
 function SphereGrid() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} className="md:hidden rounded-full cursor-pointer group overflow-hidden">
             {/* 
       // Controls Panel (commented out as requested)
       <div style={{ 
@@ -104,10 +104,15 @@ function SphereGrid() {
       </div>
       */}
 
+            {/* Drag badge */}
+            {/* <div id="#drag" className="absolute animate-bounce duration-1000 group-hover:opacity-0 transition-all size-12 text-white rounded-full cursor-pointer pointer-events-none bg-blue-800/60 flex justify-center items-center z-50 top-[45%]">
+                drag
+            </div> */}
+
             {/* 3D Canvas */}
             <Canvas
-                camera={{ position: [0, 0, 6], fov: 40 }}
-                style={{ height: "400px", width: "400px", background: "transparent" }}
+                camera={{ position: [0, 0, 6], fov: 34 }}
+                style={{ height: "400px", width: "400px", background: "#eff6ff" }}
                 gl={{
                     alpha: true,
                     antialias: true,
@@ -115,7 +120,7 @@ function SphereGrid() {
                     logarithmicDepthBuffer: true // Helps with z-fighting for thin lines
                 }}
             >
-                <color attach="background" args={["transparent"]} />
+                <color attach="background" args={["#eff6ff"]} />
                 <Scene config={CONFIG} />
             </Canvas>
         </div>
